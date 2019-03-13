@@ -1,0 +1,16 @@
+#home {
+    height: 100vh;
+    background: url(../images/black-and-white-black-and-white-blur-34088.jpg)
+      no-repeat center center fixed;
+    background-size: cover;
+  }
+  .home-text {
+    color: white;
+    text-shadow: 3px 3px #222;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+  }
+  

@@ -1,0 +1,35 @@
+#contact {
+}
+.contact {
+  padding-bottom: 50px;
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+.contact-header {
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-links {
+  padding-top: 20px;
+  padding-left: 80px;
+}
+.social-link {
+  padding: 0px 15px;
+}
+
+.fa-twitter {
+  color: #1da1f2;
+}
+.fa-github {
+  color: rgb(33, 31, 31);
+}
+.fa-linkedin {
+  color: #0077b5;
+}
+.fa-envelope {
+  color: black;
+}
