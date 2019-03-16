@@ -14,13 +14,13 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <nav>
-        <div class="navbar">
-          <div class="logo">
+        <div className="navbar">
+          <div className="logo">
             <h4>
               <Link to="/">Sean Parkin</Link>
             </h4>
           </div>
-          <ul class="nav-links">
+          <ul className="nav-links">
             <Link to="/#home">Home</Link>
             <Link to="/#about">About</Link>
             <Link to="/#skills">Skills</Link>
