@@ -1,12 +1,15 @@
  import React from 'react'
  import Helmet from 'react-helmet'
 import { graphql } from 'gatsby';
-import Layout from "../components/layout"
+import Header from "../components/header"
+import Footer from "../components/footer"
+import "../components/post.css"
 
  export default function Template({data}) {
      const {markdownRemark: post} = data;
      return (
-         <Layout>
+         <>
+         <Header />
          <div className="post-container">
          <Helmet title={`Sean Parkin - ${post.frontmatter.title}`} />
              <div className="blog-post">
@@ -17,7 +20,8 @@ import Layout from "../components/layout"
              dangerouslySetInnerHTML={{__html: post.html}} />
              </div>
          </div>
-         </Layout>
+         <Footer />
+         </>
      );
  }
 

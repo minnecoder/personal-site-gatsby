@@ -1,31 +1,29 @@
 import React from "react"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Header from "../components/header"
+import Home from "../components/home"
 import Skills from "../components/skills"
 import Work from "../components/work"
 import About from "../components/about"
 import Contact from "../components/contact"
+import Footer from "../components/footer"
 
-import "../css/home.css"
+import "./index.css"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <div id="home">
-      <div class="home-text">
-        <h2>Sean Parkin</h2>
-        <p>Web Developer</p>
-        <p>Passion for Learning</p>
+const IndexPage = () => {
+  return (
+    <div>
+     
+      <div className="test">
+      <Home />
+        <Header />
+        <About />
+        <Skills />
+        <Work />
+        <Contact />
+        <Footer />
       </div>
     </div>
-    <div>
-    <About/>
-    <Skills />
-    <Work />
-    <Contact />
-    </div>
-  </Layout>
-)
+  )
+}
 
 export default IndexPage

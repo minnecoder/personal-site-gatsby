@@ -1,13 +1,11 @@
 import React from "react"
 
-import "../css/footer.css"
+import "./footer.css"
 
 const Footer = () => (
-    <footer className="footer">
-          <p className="footer-text">
-            © {new Date().getFullYear()} Sean Parkin
-            </p>
-          </footer>
+  <div id="footer">
+    <p className="footer-text">© 2019 Sean Parkin</p>
+  </div>
 )
 
 export default Footer

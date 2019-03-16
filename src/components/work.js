@@ -1,6 +1,6 @@
 import React from "react"
 
-import "../css/work.css"
+import "../components/work.css"
 import pic from "../images/tech.jpeg"
 
 const WorkItems = [

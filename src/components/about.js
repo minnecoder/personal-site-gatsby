@@ -2,7 +2,7 @@
 // import PropTypes from "prop-types"
 import React from "react"
 
-import  "../css/about.css"
+import  "../components/about.css"
 
 const AboutPage = () => (
 <div id="about">

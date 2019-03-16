@@ -1,7 +1,7 @@
 import React from "react"
 import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa"
 
-import "../css/contact.css"
+import "../components/contact.css"
 
 
 

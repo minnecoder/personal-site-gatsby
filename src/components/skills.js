@@ -3,7 +3,7 @@
 import React from "react"
 import { FaDesktop, FaServer, FaWrench } from "react-icons/fa"
 
-import "../css/skills.css"
+import "../components/skills.css"
 
 const FEskills = ["HTML", "CSS", "JavaScript", "Sass", "Bootstrap"]
 const BEskills = ["Node JS", "Express JS", "MongoDB", "MySQL", "APIs"]

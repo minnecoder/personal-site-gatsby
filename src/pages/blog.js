@@ -1,16 +1,14 @@
 import React from "react"
-
+import Header from "../components/header"
+import Footer from "../components/footer"
 import { Link } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 import { graphql } from "gatsby"
 
-import "../css/blog.css"
+import "./blog.css"
 
 const BlogPage = ({ data }) => (
-  <Layout>
-    <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
-    <h1 className="page-header">Blog</h1>
+ <>
+ <Header />
     <div id="blog-page">
       <div className="blog-index">
         <h3>Index</h3>
@@ -42,7 +40,8 @@ const BlogPage = ({ data }) => (
         ))}
       </div>
     </div>
-  </Layout>
+    <Footer />
+  </>
 )
 
 export const pageQuery = graphql`

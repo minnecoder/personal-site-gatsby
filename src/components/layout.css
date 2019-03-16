@@ -625,3 +625,15 @@ pre tt:after {
   }
 }
 
+.footer {
+  width: 100%;
+  background-color: #0a7e3c;
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+} 
+.footer-text {
+  text-align: center;
+  color: rgb(236, 233, 233);
+  padding: 25px;
+}
