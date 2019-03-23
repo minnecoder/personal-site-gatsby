@@ -1,0 +1,23 @@
+.contactid {
+  margin-bottom: 80px;
+}
+.contactsect {
+  padding-bottom: 50px;
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+.contactheader {
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+}
+
+.sociallinks {
+  padding-top: 20px;
+  padding-left: 80px;
+}
+.sociallink {
+  padding: 0px 15px;
+}

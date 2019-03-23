@@ -1,0 +1,81 @@
+:root {
+    --sec-color: #0cc45b;
+  }
+  .workID {
+      padding: 8vh 0px;
+    }
+    .work {
+        width: 70%;
+        margin: 0 auto;
+        justify-items: center;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 1fr 1fr;
+        grid-template-areas: 
+        "workHeader workHeader"
+        "workItem1 workItem2"
+        "workItem3 workItem4"
+    }
+    .workItem1 {
+    grid-area: workItem1;
+    }
+    .workItem2 {
+      grid-area: workItem2;
+    }
+    .workItem3 {
+      grid-area: workItem3;
+    }
+    .workItem4 {
+      grid-area: workItem4;
+    }
+    .workHeader {
+      font-size: 50px;
+      text-align: center;
+      grid-area: workHeader;
+      /* margin-bottom: 20px; */
+    padding: 20px 0;
+    }
+    .workItem {
+        /* grid-area: workItem; */
+     display: flex;
+    text-align: center;
+     flex-direction: column;
+      border: solid 1px rgb(99, 97, 97);
+      /* margin-bottom: 20px; */
+    }
+    .workinfo {
+      order: 1;
+    }
+    .workinfo p {
+      padding-top: 15px;
+    }
+    .workinfo h3 {
+      padding: 15px;
+    }
+    .workBtns {
+      order:2;
+      align-items: flex-end;
+      padding: 20px;
+    }
+    .workBtn {
+      padding: 0 40px;
+      background: var(--sec-color);
+      border: solid 1px var(--sec-color);
+      border-radius: 4px;
+      padding: 6px 25px;
+      color: #222;
+      text-decoration: none;
+    }
+    .workBtn:hover {
+      background: #0db154
+    }
+    .workimg {
+    flex-basis: 100%;
+    }
+    
+    .workbtns {
+      display: flex;
+      justify-content: space-around;
+    }
+    
