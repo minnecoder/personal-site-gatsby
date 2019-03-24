@@ -14,16 +14,16 @@ const Contact = () => (
       </h3>
       <div className={styles.sociallinks}>
         <a className={styles.sociallink} href="https://twitter.com/minnecoder">
-          <FaTwitter size={42} color={"#1da1f2"}/>
+          <FaTwitter size={42} color={"#08fdd860"}/>
         </a>
         <a className="" href="https://www.linkedin.com/in/seanparkin/">
-          <FaLinkedin size={42} color={"#0077b5"} />
+          <FaLinkedin size={42} color={"#08fdd860"} />
         </a>
         <a className={styles.sociallink} href="https://github.com/minnecoder">
-          <FaGithub size={42} color={"#211f1f"}/>
+          <FaGithub size={42} color={"#08fdd860"}/>
         </a>
         <a className={styles.sociallink} href="mailto:sdparkin@gmail.com">
-          <FaEnvelope size={42} color={"black"}  />
+          <FaEnvelope size={42} color={"#08fdd860"}  />
         </a>
       </div>
     </div>

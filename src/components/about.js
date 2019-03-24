@@ -1,6 +1,5 @@
 import React from "react"
 import { FaDesktop, FaServer, FaWrench } from "react-icons/fa"
-import profilepic from "../images/profilepic.png"
 import styles from "./about.module.css"
 
 const FEskills = ["HTML", "CSS", "JavaScript", "Sass", "Bootstrap"]
@@ -11,7 +10,7 @@ const AboutPage = () => (
   <div id="about" className={styles.aboutID}>
     <h1 className={styles.aboutHeader}>About</h1>
     <div className={styles.about}>
-      <img src={profilepic} alt="profile" />
+
 
       <p className={styles.aboutText}>
         Hi! My name is Sean Parkin, I am a recent graduate of the Web
@@ -24,7 +23,7 @@ const AboutPage = () => (
     <div className={styles.skills}>
       <h4 className={styles.skillsHeader}>Skills</h4>
       <div className={styles.skillsSection}>
-        <FaDesktop size={56} />
+        <FaDesktop size={56} color={"#08fdd860"}/>
         <h2 className="front-end-title">Front End Skills</h2>
         <ul className="front-end-text">
           {FEskills.map(skill => (
@@ -35,7 +34,7 @@ const AboutPage = () => (
         </ul>
       </div>
       <div className={styles.skillsSection}>
-        <FaServer size={56} />
+        <FaServer size={56} color={"#08fdd860"} />
         <h2 className="back-end-title">Back End Skills</h2>
         <ul className="back-end-text">
           {BEskills.map(skill => (
@@ -46,7 +45,7 @@ const AboutPage = () => (
         </ul>
       </div>
       <div className={styles.skillsSection}>
-        <FaWrench size={56} />
+        <FaWrench size={56} color={"#08fdd860"} />
         <h2 className="web-app-title">Tools</h2>
         <ul className="web-app-text">
           {OtherSkills.map(skill => (

@@ -1,5 +1,7 @@
 .contactid {
   margin-bottom: 80px;
+  background: #222;
+  font-family: Arial, sans-serif;
 }
 .contactsect {
   padding-bottom: 50px;
@@ -8,10 +10,14 @@
   overflow: hidden;
   text-align: center;
 }
+.contactsect h3 {
+  color: white;
+}
 .contactheader {
   font-size: 50px;
   text-align: center;
   padding: 20px;
+  color: #08fdd8
 }
 
 .sociallinks {

@@ -4,26 +4,23 @@ import React from "react"
 import styles from "./header.module.css"
 
 const Header = ({ siteTitle }) => (
-  <header>
-  
-      <div className={styles.nav}>
-        <div className={styles.navbar}>
-          <div className={styles.logo}>
-            <h4>
-              <Link to="/">Sean Parkin</Link>
-            </h4>
-          </div>
-          <ul className={styles.navlinks}>
-            <Link to="/#home">Home</Link>
-            <Link to="/#about">About</Link>
-            {/* <Link to="/#skills">Skills</Link> */}
-            <Link to="/#work">Projects</Link>
-            <Link to ="/#contact">Contact</Link>
-            <Link to="/blog">Blog</Link>
-          </ul>
+  <header className={styles.header}>
+    <div className={styles.nav}>
+      <div className={styles.navbar}>
+        <div className={styles.logo}>
+          <h4>
+            <Link to="/">Sean Parkin</Link>
+          </h4>
         </div>
+        <ul className={styles.navlinks}>
+          <Link to="/#home">Home</Link>
+          <Link to="/#about">About</Link>
+          <Link to="/#work">Projects</Link>
+          <Link to="/#contact">Contact</Link>
+          <Link to="/blog">Blog</Link>
+        </ul>
       </div>
-
+    </div>
   </header>
 )
 

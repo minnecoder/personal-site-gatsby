@@ -1,19 +1,21 @@
 .aboutID {
     padding: 8vh 0;
+    background-color: #222222;
+    font-family: Helvetica, sans-serif;
+    color: white;
   }
   .about {
     width: 60%;
     margin: 0 auto;
     display: flex;
+   
   }
   .aboutHeader {
     font-size: 50px;
     text-align: center;
     margin-bottom: 20px;
+    color: #08fdd8;
   }
- .profilepic {
-
- }
   .aboutText {
       padding: 20px;
   }
