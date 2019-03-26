@@ -24,7 +24,7 @@ const AboutPage = () => (
       <h4 className={styles.skillsHeader}>Skills</h4>
       <div className={styles.skillsSection}>
         <FaDesktop size={56} color={"#08fdd860"}/>
-        <h2 className="front-end-title">Front End Skills</h2>
+        <h2 className={styles.skillTitle}>Front End Skills</h2>
         <ul className="front-end-text">
           {FEskills.map(skill => (
             <li key={skill} className={styles.skillsItem}>
@@ -35,7 +35,7 @@ const AboutPage = () => (
       </div>
       <div className={styles.skillsSection}>
         <FaServer size={56} color={"#08fdd860"} />
-        <h2 className="back-end-title">Back End Skills</h2>
+        <h2 className={styles.skillTitle}>Back End Skills</h2>
         <ul className="back-end-text">
           {BEskills.map(skill => (
             <li key={skill} className={styles.skillsItem}>
@@ -46,7 +46,7 @@ const AboutPage = () => (
       </div>
       <div className={styles.skillsSection}>
         <FaWrench size={56} color={"#08fdd860"} />
-        <h2 className="web-app-title">Tools</h2>
+        <h2 className={styles.skillTitle}>Tools</h2>
         <ul className="web-app-text">
           {OtherSkills.map(skill => (
             <li key={skill} className={styles.skillsItem}>

@@ -46,13 +46,14 @@
       background: #a3a3a3;
       /* margin-bottom: 20px; */
     }
-    .workinfo {
+    .workInfo {
       order: 1;
+      padding: 10px 0;
     }
-    .workinfo p {
-      padding-top: 15px;
+    .workInfo p {
+      padding: 15px 15px 0 15px;
     }
-    .workinfo h3 {
+    .workInfo h3 {
       padding: 15px;
     }
     .workBtns {
@@ -70,7 +71,7 @@
       text-decoration: none;
     }
     .workBtn:hover {
-      background: #0db154
+      background: #08fdd8
     }
     .workimg {
     flex-basis: 100%;

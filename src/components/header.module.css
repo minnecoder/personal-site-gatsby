@@ -23,7 +23,7 @@
     min-height: 8vh;
     border-bottom: 1px solid #222;
     background: #222;
-    padding-top: 15px;
+    padding: 15px 0;
 }
 .logo {
     /* color: rgb(226,226,226); */
