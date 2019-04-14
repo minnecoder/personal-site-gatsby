@@ -11,32 +11,32 @@ const OtherSkills =["GitHub"]
 
 const Skills = () => (
   <div id="skills">
-    <div class="skills">
-      <h2 class="skills-header">Skills</h2>
-      <div class="skills-section">
+    <div className="skills">
+      <h2 className="skills-header">Skills</h2>
+      <div className="skills-section">
         <FaDesktop size={56} />
-        <h2 class="front-end-title">Front End Skills</h2>
-        <ul class="front-end-text">
+        <h2 className="front-end-title">Front End Skills</h2>
+        <ul className="front-end-text">
         {FEskills.map(skill => (
-          <li class="skills-item">{skill}</li>
+          <li key={skill} className="skills-item">{skill}</li>
         ))}
         </ul>
       </div>
-      <div class="skills-section">
+      <div className="skills-section">
         <FaServer size={56} />
-        <h2 class="back-end-title">Back End Skills</h2>
-        <ul class="back-end-text">
+        <h2 className="back-end-title">Back End Skills</h2>
+        <ul className="back-end-text">
         {BEskills.map(skill => (
-          <li class="skills-item">{skill}</li>
+          <li key={skill} className="skills-item">{skill}</li>
         ))}
         </ul>
       </div>
-      <div class="skills-section">
+      <div className="skills-section">
         <FaWrench size={56} />
-        <h2 class="web-app-title">Tools</h2>
-        <ul class="web-app-text">
+        <h2 className="web-app-title">Tools</h2>
+        <ul className="web-app-text">
         {OtherSkills.map(skill => (
-          <li class="skills-item">{skill}</li>
+          <li key={skill} className="skills-item">{skill}</li>
         ))}
         </ul>
       </div>

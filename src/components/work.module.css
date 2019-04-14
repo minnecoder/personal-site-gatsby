@@ -81,4 +81,14 @@
       display: flex;
       justify-content: space-around;
     }
-    
+    @media screen and (max-width: 1000px) {
+      .work{
+        display: grid;
+        grid-template-areas:  
+        "workHeader"
+        "workItem1" 
+        "workItem2"
+        "workItem3" 
+        "workItem4"
+      }
+        }
