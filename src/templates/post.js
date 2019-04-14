@@ -29,9 +29,9 @@ import styles from "./post.module.css"
      );
  }
 
- Template.propTypes ={
-   data: PropTypes.object
- }
+//  Template.propTypes ={
+//    data: PropTypes.object
+//  }
  export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path} }) { 
