@@ -1,14 +1,13 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import styled from "styled-components"
+import { Link } from 'gatsby'
+import React from 'react'
+import styled from 'styled-components'
 
 const HeaderSection = styled.div`
-background: #242423;
+  background: #242423;
 `
 
 const Nav = styled.div`
-position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   margin: auto;
@@ -44,15 +43,17 @@ const Navlink = styled(Link)`
   color: #08fdd8;
   font-weight: bold;
 `
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <HeaderSection>
     <Nav>
       <Navbar>
         <LogoLink to="/">Sean Parkin</LogoLink>
         <Navlinks>
-          <Navlink to="/#home" className="navlink">Home</Navlink>
+          <Navlink to="/#home" className="navlink">
+            Home
+          </Navlink>
           <Navlink to="/#about">About</Navlink>
-          <Navlink to="/#work">Projects</Navlink>
+          <Navlink to="/#work">Portfolio</Navlink>
           <Navlink to="/#contact">Contact</Navlink>
           <Navlink to="/blog">Blog</Navlink>
         </Navlinks>
@@ -60,13 +61,5 @@ const Header = ({ siteTitle }) => (
     </Nav>
   </HeaderSection>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

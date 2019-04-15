@@ -1,89 +1,248 @@
-import React from "react"
-import styles from "./work.module.css"
-import pic from "../images/tech.jpeg"
+import React from 'react'
+import styled from 'styled-components'
+import pic from '../images/tech.jpeg'
 
+const PortfolioSection = styled.div`
+  padding: 8vh 0px;
+  background: #353535;
+  font-family: Arial, Helvetica, sans-serif;
+`
+const Portfolio = styled.div`
+  width: 70%;
+  margin: 0 auto;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  > h2 {
+    font-size: 50px;
+    text-align: center;
+    color: #08fdd8;
+    padding: 20px 0;
+  }
+`
 
+const PortfolioItem = styled.div`
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  border: solid 1px rgb(99, 97, 97);
+  background: #a3a3a3;
+  margin-bottom: 25px;
+  > h3 {
+    font-size: 30px;
+    padding: 20px 0;
+  }
+`
+const PortfolioInfo = styled.div`
+  display: flex;
+  justify-content: space-around;
+`
+const PortfolioLeft = styled.div`
+  width: 50%;
+
+  > h3 {
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+  li {
+    list-style-type: none;
+  }
+`
+const PortfolioRight = styled.div`
+  width: 50%;
+
+  > p {
+    padding-right: 40px;
+    padding-bottom: 20px;
+    text-align: justify;
+  }
+  h3 {
+    padding-bottom: 5px;
+  }
+  li {
+    list-style-type: none;
+  }
+`
+
+const WorkBtns = styled.div`
+  order: 2;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+`
+
+const WorkBtn = styled.a`
+  padding: 0 40px;
+  background: #08fdd860;
+  border: solid 1px #08fdd860;
+  border-radius: 4px;
+  padding: 6px 25px;
+  color: #222;
+  text-decoration: none;
+`
 
 const WorkPage = () => (
-  <div id="work" className={styles.workID}>
-    <div className={styles.work}>
-      <h2 className={styles.workHeader}>Work</h2>
+  <PortfolioSection id="work">
+    <Portfolio>
+      <h2>Portfolio</h2>
 
-     
-        <div className={`${styles.workItem} ${styles.workItem1}`}>
-          <div className={styles.workInfo}>
-            <h3>Work Item 1</h3>
+      <PortfolioItem>
+        <h3>Project Title</h3>
+        <PortfolioInfo>
+          <PortfolioLeft>
             <img src={pic} alt="" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-      quos mollitia, dolorum esse quo quod impedit cumque sed quae
-      voluptatibus.</p>
-          </div>
-          <div className={styles.workBtns}>
-            <a className={styles.workBtn} href="https://www.seanparkin.com">
-              Website
-            </a>
-            <a className={styles.workBtn} href="https://github.com/minnecoder/">
-              GitHub
-            </a>
-          </div>
-        </div>
+            <h3>Technologies Used</h3>
+            <ul>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+            </ul>
+          </PortfolioLeft>
+          <PortfolioRight>
+            <h3>Description</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
+              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
+              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
+              beatae cum alias debitis placeat facere! Culpa, at illum.
+            </p>
+            <h3>Notable Features</h3>
+            <ul>
+              <li>Feature 1</li>
+              <li>Feature 2</li>
+              <li>Feature 3</li>
+              <li>Feature 4</li>
+              <li>Feature 5</li>
+            </ul>
+          </PortfolioRight>
+        </PortfolioInfo>
+        <WorkBtns>
+          <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
+          <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
+        </WorkBtns>
+      </PortfolioItem>
 
-        <div className={`${styles.workItem} ${styles.workItem2}`}>
-          <div className={styles.workInfo}>
-            <h3>Work Item 2</h3>
+      <PortfolioItem>
+        <h3>Project Title</h3>
+        <PortfolioInfo>
+          <PortfolioLeft>
             <img src={pic} alt="" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-      quos mollitia, dolorum esse quo quod impedit cumque sed quae
-      voluptatibus.</p>
-          </div>
-          <div className={styles.workBtns}>
-            <a className={styles.workBtn} href="https://www.seanparkin.com">
-              Website
-            </a>
-            <a className={styles.workBtn} href="https://github.com/minnecoder/">
-              GitHub
-            </a>
-          </div>
-        </div>
+            <h3>Technologies Used</h3>
+            <ul>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+            </ul>
+          </PortfolioLeft>
+          <PortfolioRight>
+            <h3>Description</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
+              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
+              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
+              beatae cum alias debitis placeat facere! Culpa, at illum.
+            </p>
+            <h3>Notable Features</h3>
+            <ul>
+              <li>Feature 1</li>
+              <li>Feature 2</li>
+              <li>Feature 3</li>
+              <li>Feature 4</li>
+              <li>Feature 5</li>
+            </ul>
+          </PortfolioRight>
+        </PortfolioInfo>
+        <WorkBtns>
+          <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
+          <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
+        </WorkBtns>
+      </PortfolioItem>
 
-        <div className={`${styles.workItem} ${styles.workItem3}`}>
-          <div className={styles.workInfo}>
-            <h3>Work Item 3</h3>
+      <PortfolioItem>
+        <h3>Project Title</h3>
+        <PortfolioInfo>
+          <PortfolioLeft>
             <img src={pic} alt="" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-      quos mollitia, dolorum esse quo quod impedit cumque sed quae
-      voluptatibus.</p>
-          </div>
-          <div className={styles.workBtns}>
-            <a className={styles.workBtn} href="https://www.seanparkin.com">
-              Website
-            </a>
-            <a className={styles.workBtn} href="https://github.com/minnecoder/">
-              GitHub
-            </a>
-          </div>
-        </div>
+            <h3>Technologies Used</h3>
+            <ul>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+            </ul>
+          </PortfolioLeft>
+          <PortfolioRight>
+            <h3>Description</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
+              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
+              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
+              beatae cum alias debitis placeat facere! Culpa, at illum.
+            </p>
+            <h3>Notable Features</h3>
+            <ul>
+              <li>Feature 1</li>
+              <li>Feature 2</li>
+              <li>Feature 3</li>
+              <li>Feature 4</li>
+              <li>Feature 5</li>
+            </ul>
+          </PortfolioRight>
+        </PortfolioInfo>
+        <WorkBtns>
+          <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
+          <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
+        </WorkBtns>
+      </PortfolioItem>
 
-        <div className={`${styles.workItem} ${styles.workItem4}`}>
-          <div className={styles.workInfo}>
-            <h3>Work Item 4</h3>
+      <PortfolioItem>
+        <h3>Project Title</h3>
+        <PortfolioInfo>
+          <PortfolioLeft>
             <img src={pic} alt="" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-      quos mollitia, dolorum esse quo quod impedit cumque sed quae
-      voluptatibus.</p>
-          </div>
-          <div className={styles.workBtns}>
-            <a className={styles.workBtn} href="https://www.seanparkin.com">
-              Website
-            </a>
-            <a className={styles.workBtn} href="https://github.com/minnecoder/">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-    </div>
-  </div>
+            <h3>Technologies Used</h3>
+            <ul>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+              <li>Tech </li>
+            </ul>
+          </PortfolioLeft>
+          <PortfolioRight>
+            <h3>Description</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
+              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
+              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
+              beatae cum alias debitis placeat facere! Culpa, at illum.
+            </p>
+            <h3>Notable Features</h3>
+            <ul>
+              <li>Feature 1</li>
+              <li>Feature 2</li>
+              <li>Feature 3</li>
+              <li>Feature 4</li>
+              <li>Feature 5</li>
+            </ul>
+          </PortfolioRight>
+        </PortfolioInfo>
+        <WorkBtns>
+          <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
+          <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
+        </WorkBtns>
+      </PortfolioItem>
+    </Portfolio>
+  </PortfolioSection>
 )
 
 export default WorkPage

@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react'
 // import styles from "./home.module.css"
-import img from "../images/black-and-white-black-and-white-blur-34088.jpg"
-import styled from "styled-components";
+import styled from 'styled-components'
+import img from '../images/black-and-white-black-and-white-blur-34088.jpg'
 
 const HomeSect = styled.div`
   height: 100vh;
@@ -39,7 +39,7 @@ const HomeText = styled.div`
 
 const Home = () => (
   <HomeSect id="home">
-    <Shade/>
+    <Shade />
     <HomeText>
       <h2>Sean Parkin</h2>
       <p>Web Developer</p>

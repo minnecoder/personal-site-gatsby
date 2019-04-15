@@ -1,6 +1,6 @@
-import React from "react"
-import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa"
-import styled from "styled-components";
+import React from 'react'
+import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import styled from 'styled-components'
 
 const ContactArea = styled.div`
   margin-bottom: 60px;
@@ -14,11 +14,11 @@ const ContactHeader = styled.h1`
   color: #08fdd8;
 `
 const ContactSect = styled.div`
-padding-bottom: 50px;
-width: 60%;
-margin: 0 auto;
-overflow: hidden;
-text-align: center;
+  padding-bottom: 50px;
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
 `
 
 const ContactSectHeader = styled.h3`
@@ -38,21 +38,19 @@ const Contact = () => (
   <ContactArea id="contact">
     <ContactHeader>Contact</ContactHeader>
     <ContactSect>
-      <ContactSectHeader>
-        Do you like what you have seen and you are interested in working me?
-      </ContactSectHeader>
+      <ContactSectHeader>Do you like what you have seen and you are interested in working me?</ContactSectHeader>
       <SocialLinks>
         <SocialLink href="https://twitter.com/minnecoder">
-          <FaTwitter size={42} color={"#08fdd860"} />
+          <FaTwitter size={42} color="#08fdd860" />
         </SocialLink>
         <SocialLink href="https://www.linkedin.com/in/seanparkin/">
-          <FaLinkedin size={42} color={"#08fdd860"} />
+          <FaLinkedin size={42} color="#08fdd860" />
         </SocialLink>
         <SocialLink href="https://github.com/minnecoder">
-          <FaGithub size={42} color={"#08fdd860"} />
+          <FaGithub size={42} color="#08fdd860" />
         </SocialLink>
         <SocialLink href="mailto:sdparkin@gmail.com">
-          <FaEnvelope size={42} color={"#08fdd860"} />
+          <FaEnvelope size={42} color="#08fdd860" />
         </SocialLink>
       </SocialLinks>
     </ContactSect>
