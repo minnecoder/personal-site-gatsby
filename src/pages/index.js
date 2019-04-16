@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Helmet from 'react-helmet'
 import Header from '../components/header'
 import Home from '../components/home'
 import Work from '../components/work'
@@ -18,6 +19,7 @@ const Main = styled.div`
 
 const IndexPage = () => (
   <Main>
+    <Helmet title="Sean Parkin" />
     <Home />
     <Header />
     <About />

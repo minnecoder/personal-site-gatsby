@@ -6,6 +6,7 @@ const PortfolioSection = styled.div`
   padding: 8vh 0px;
   background: #353535;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
 `
 const Portfolio = styled.div`
   width: 70%;
@@ -37,24 +38,25 @@ const PortfolioInfo = styled.div`
   display: flex;
   justify-content: space-around;
 `
+
 const PortfolioLeft = styled.div`
   width: 50%;
+  padding: 0 2em;
+  font-size: 1em;
 
-  > h3 {
-    padding-top: 20px;
-    padding-bottom: 5px;
-  }
-  li {
-    list-style-type: none;
+  > img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
   }
 `
 const PortfolioRight = styled.div`
   width: 50%;
 
   > p {
-    padding-right: 40px;
-    padding-bottom: 20px;
-    text-align: justify;
+    width: 90%;
+    padding-bottom: 10px;
+    text-align: center;
   }
   h3 {
     padding-bottom: 5px;
@@ -91,6 +93,14 @@ const WorkPage = () => (
         <PortfolioInfo>
           <PortfolioLeft>
             <img src={pic} alt="" />
+          </PortfolioLeft>
+          <PortfolioRight>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
+              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
+              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
+              beatae cum alias debitis placeat facere! Culpa, at illum.
+            </p>
             <h3>Technologies Used</h3>
             <ul>
               <li>Tech </li>
@@ -100,29 +110,12 @@ const WorkPage = () => (
               <li>Tech </li>
               <li>Tech </li>
             </ul>
-          </PortfolioLeft>
-          <PortfolioRight>
-            <h3>Description</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
-              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
-              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
-              beatae cum alias debitis placeat facere! Culpa, at illum.
-            </p>
-            <h3>Notable Features</h3>
-            <ul>
-              <li>Feature 1</li>
-              <li>Feature 2</li>
-              <li>Feature 3</li>
-              <li>Feature 4</li>
-              <li>Feature 5</li>
-            </ul>
+            <WorkBtns>
+              <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
+              <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
+            </WorkBtns>
           </PortfolioRight>
         </PortfolioInfo>
-        <WorkBtns>
-          <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
-          <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
-        </WorkBtns>
       </PortfolioItem>
 
       <PortfolioItem>
@@ -130,6 +123,14 @@ const WorkPage = () => (
         <PortfolioInfo>
           <PortfolioLeft>
             <img src={pic} alt="" />
+          </PortfolioLeft>
+          <PortfolioRight>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
+              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
+              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
+              beatae cum alias debitis placeat facere! Culpa, at illum.
+            </p>
             <h3>Technologies Used</h3>
             <ul>
               <li>Tech </li>
@@ -139,29 +140,12 @@ const WorkPage = () => (
               <li>Tech </li>
               <li>Tech </li>
             </ul>
-          </PortfolioLeft>
-          <PortfolioRight>
-            <h3>Description</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
-              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
-              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
-              beatae cum alias debitis placeat facere! Culpa, at illum.
-            </p>
-            <h3>Notable Features</h3>
-            <ul>
-              <li>Feature 1</li>
-              <li>Feature 2</li>
-              <li>Feature 3</li>
-              <li>Feature 4</li>
-              <li>Feature 5</li>
-            </ul>
+            <WorkBtns>
+              <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
+              <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
+            </WorkBtns>
           </PortfolioRight>
         </PortfolioInfo>
-        <WorkBtns>
-          <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
-          <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
-        </WorkBtns>
       </PortfolioItem>
 
       <PortfolioItem>
@@ -169,6 +153,14 @@ const WorkPage = () => (
         <PortfolioInfo>
           <PortfolioLeft>
             <img src={pic} alt="" />
+          </PortfolioLeft>
+          <PortfolioRight>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
+              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
+              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
+              beatae cum alias debitis placeat facere! Culpa, at illum.
+            </p>
             <h3>Technologies Used</h3>
             <ul>
               <li>Tech </li>
@@ -178,29 +170,12 @@ const WorkPage = () => (
               <li>Tech </li>
               <li>Tech </li>
             </ul>
-          </PortfolioLeft>
-          <PortfolioRight>
-            <h3>Description</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
-              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
-              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
-              beatae cum alias debitis placeat facere! Culpa, at illum.
-            </p>
-            <h3>Notable Features</h3>
-            <ul>
-              <li>Feature 1</li>
-              <li>Feature 2</li>
-              <li>Feature 3</li>
-              <li>Feature 4</li>
-              <li>Feature 5</li>
-            </ul>
+            <WorkBtns>
+              <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
+              <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
+            </WorkBtns>
           </PortfolioRight>
         </PortfolioInfo>
-        <WorkBtns>
-          <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
-          <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
-        </WorkBtns>
       </PortfolioItem>
 
       <PortfolioItem>
@@ -208,6 +183,14 @@ const WorkPage = () => (
         <PortfolioInfo>
           <PortfolioLeft>
             <img src={pic} alt="" />
+          </PortfolioLeft>
+          <PortfolioRight>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
+              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
+              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
+              beatae cum alias debitis placeat facere! Culpa, at illum.
+            </p>
             <h3>Technologies Used</h3>
             <ul>
               <li>Tech </li>
@@ -217,29 +200,12 @@ const WorkPage = () => (
               <li>Tech </li>
               <li>Tech </li>
             </ul>
-          </PortfolioLeft>
-          <PortfolioRight>
-            <h3>Description</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
-              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
-              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
-              beatae cum alias debitis placeat facere! Culpa, at illum.
-            </p>
-            <h3>Notable Features</h3>
-            <ul>
-              <li>Feature 1</li>
-              <li>Feature 2</li>
-              <li>Feature 3</li>
-              <li>Feature 4</li>
-              <li>Feature 5</li>
-            </ul>
+            <WorkBtns>
+              <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
+              <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
+            </WorkBtns>
           </PortfolioRight>
         </PortfolioInfo>
-        <WorkBtns>
-          <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
-          <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
-        </WorkBtns>
       </PortfolioItem>
     </Portfolio>
   </PortfolioSection>

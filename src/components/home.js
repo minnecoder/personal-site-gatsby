@@ -27,13 +27,14 @@ const HomeText = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 30px;
+  // font-size: 30px;
   > h2 {
-    font-size: 150px;
+    font-size: 6em;
   }
   p {
     text-align: center;
     color: white;
+    font-size: 2em;
   }
 `
 
