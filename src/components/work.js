@@ -1,6 +1,50 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
-import pic from '../images/tech.jpeg'
+import Img from 'gatsby-image'
+import projects from '../data/projects.json'
+import pic from '../images/projects/tech.png'
+
+class Work extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    const projectI = this.props
+    const { projectImgs } = projectI
+
+    return (
+      <PortfolioSection id="work">
+        <Portfolio>
+          <h2>Portfolio</h2>
+
+          <PortfolioList>
+            {projects.map(project => {
+              const image = projectImgs.find(n => n.node.relativePath === `projects/${project.img}`)
+              const imageSizes = image.node.childImageSharp.sizes
+              return (
+                <PortfolioItem key={project.name}>
+                  <h3>{project.name}</h3>
+                  <Img title={project.name} alt=" Image of project" sizes={imageSizes} />
+                  <p>{project.description}</p>
+                  <p>
+                    <strong>Technologies Used:</strong> {project.technologies}
+                  </p>
+
+                  <WorkBtns>
+                    <WorkBtn href={project.website}>Website</WorkBtn>
+                    <WorkBtn href={project.github}>GitHub</WorkBtn>
+                  </WorkBtns>
+                </PortfolioItem>
+              )
+            })}
+          </PortfolioList>
+        </Portfolio>
+      </PortfolioSection>
+    )
+  }
+}
+export default Work
 
 const PortfolioSection = styled.div`
   padding: 8vh 0px;
@@ -9,7 +53,6 @@ const PortfolioSection = styled.div`
   font-size: 1em;
 `
 const Portfolio = styled.div`
-  width: 70%;
   margin: 0 auto;
   justify-items: center;
   display: flex;
@@ -21,48 +64,27 @@ const Portfolio = styled.div`
     padding: 20px 0;
   }
 `
+const PortfolioList = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`
 
 const PortfolioItem = styled.div`
+  width: 400px;
   display: flex;
   text-align: center;
   flex-direction: column;
   border: solid 1px rgb(99, 97, 97);
   background: #a3a3a3;
-  margin-bottom: 25px;
+  margin-top: 15px;
   > h3 {
-    font-size: 30px;
+    font-size: 25px;
     padding: 20px 0;
   }
-`
-const PortfolioInfo = styled.div`
-  display: flex;
-  justify-content: space-around;
-`
-
-const PortfolioLeft = styled.div`
-  width: 50%;
-  padding: 0 2em;
-  font-size: 1em;
-
-  > img {
-    width: 100%;
-    height: auto;
-    padding-bottom: 20px;
-  }
-`
-const PortfolioRight = styled.div`
-  width: 50%;
-
-  > p {
-    width: 90%;
-    padding-bottom: 10px;
-    text-align: center;
-  }
-  h3 {
-    padding-bottom: 5px;
-  }
-  li {
-    list-style-type: none;
+  p {
+    padding: 10px;
   }
 `
 
@@ -82,133 +104,3 @@ const WorkBtn = styled.a`
   color: #222;
   text-decoration: none;
 `
-
-const WorkPage = () => (
-  <PortfolioSection id="work">
-    <Portfolio>
-      <h2>Portfolio</h2>
-
-      <PortfolioItem>
-        <h3>Project Title</h3>
-        <PortfolioInfo>
-          <PortfolioLeft>
-            <img src={pic} alt="" />
-          </PortfolioLeft>
-          <PortfolioRight>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
-              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
-              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
-              beatae cum alias debitis placeat facere! Culpa, at illum.
-            </p>
-            <h3>Technologies Used</h3>
-            <ul>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-            </ul>
-            <WorkBtns>
-              <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
-              <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
-            </WorkBtns>
-          </PortfolioRight>
-        </PortfolioInfo>
-      </PortfolioItem>
-
-      <PortfolioItem>
-        <h3>Project Title</h3>
-        <PortfolioInfo>
-          <PortfolioLeft>
-            <img src={pic} alt="" />
-          </PortfolioLeft>
-          <PortfolioRight>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
-              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
-              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
-              beatae cum alias debitis placeat facere! Culpa, at illum.
-            </p>
-            <h3>Technologies Used</h3>
-            <ul>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-            </ul>
-            <WorkBtns>
-              <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
-              <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
-            </WorkBtns>
-          </PortfolioRight>
-        </PortfolioInfo>
-      </PortfolioItem>
-
-      <PortfolioItem>
-        <h3>Project Title</h3>
-        <PortfolioInfo>
-          <PortfolioLeft>
-            <img src={pic} alt="" />
-          </PortfolioLeft>
-          <PortfolioRight>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
-              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
-              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
-              beatae cum alias debitis placeat facere! Culpa, at illum.
-            </p>
-            <h3>Technologies Used</h3>
-            <ul>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-            </ul>
-            <WorkBtns>
-              <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
-              <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
-            </WorkBtns>
-          </PortfolioRight>
-        </PortfolioInfo>
-      </PortfolioItem>
-
-      <PortfolioItem>
-        <h3>Project Title</h3>
-        <PortfolioInfo>
-          <PortfolioLeft>
-            <img src={pic} alt="" />
-          </PortfolioLeft>
-          <PortfolioRight>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sequi perspiciatis a, nesciunt aperiam
-              accusantium hic quo similique, nihil laborum recusandae vitae asperiores non fugiat voluptatum reiciendis
-              culpa quibusdam tempora at omnis adipisci sapiente quis. Consectetur libero rem dolores veniam ratione
-              beatae cum alias debitis placeat facere! Culpa, at illum.
-            </p>
-            <h3>Technologies Used</h3>
-            <ul>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-              <li>Tech </li>
-            </ul>
-            <WorkBtns>
-              <WorkBtn href="https://www.seanparkin.com">Website</WorkBtn>
-              <WorkBtn href="https://github.com/minnecoder/">GitHub</WorkBtn>
-            </WorkBtns>
-          </PortfolioRight>
-        </PortfolioInfo>
-      </PortfolioItem>
-    </Portfolio>
-  </PortfolioSection>
-)
-
-export default WorkPage
