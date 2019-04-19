@@ -64,8 +64,6 @@ const BlogEntry = styled.div`
   }
 `
 
-// #08fdd8
-
 const BlogPage = ({ data }) => (
   <Main>
     <Header />
