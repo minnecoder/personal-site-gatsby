@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import media from './media'
 
 const HeaderSection = styled.div`
   background: #242423;
@@ -22,8 +23,11 @@ const Navbar = styled.div`
   align-items: center;
   height: 8vh;
   border-bottom: 1px solid #222;
-  background: #222;
+  background: rgba(16, 14, 23, 0.9);
   padding: 15px 0;
+  ${media.tablet`
+  flex-direction: column;
+  `}
 `
 
 const LogoLink = styled(Link)`
@@ -31,7 +35,7 @@ const LogoLink = styled(Link)`
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  color: #08fdd8;
+  color: #fff;
 `
 const Navlinks = styled.div`
   display: flex;
@@ -40,8 +44,12 @@ const Navlinks = styled.div`
 `
 const Navlink = styled(Link)`
   text-decoration: none;
-  color: #08fdd8;
+  color: #fff;
   font-weight: bold;
+  padding: 0 0.6rem;
+  &:hover {
+    color: #08fdd8;
+  }
 `
 const Header = () => (
   <HeaderSection>

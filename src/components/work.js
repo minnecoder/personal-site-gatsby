@@ -16,7 +16,12 @@ class Work extends Component {
     return (
       <PortfolioSection id="work">
         <Portfolio>
-          <h2>Portfolio</h2>
+          <p>Recent Work</p>
+          <WorkTypes>
+            <button type="button">All</button>
+            <button type="button">Front End</button>
+            <button type="button">Back End</button>
+          </WorkTypes>
 
           <PortfolioList>
             {projects.map(project => {
@@ -47,41 +52,59 @@ class Work extends Component {
 export default Work
 
 const PortfolioSection = styled.div`
-  padding: 8vh 0px;
-  background: #353535;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  // padding-bottom: 12vh;
+  padding-top: 12vh;
+  background: #100e17;
+  font-family: 'Montserrat', sans-serif;
+  // font-size: 0.9em;
 `
 const Portfolio = styled.div`
+  width: 70%;
   margin: 0 auto;
   justify-items: center;
   display: flex;
   flex-direction: column;
-  > h2 {
-    font-size: 50px;
+  background: #202026;
+  box-shadow: rgb(0, 0, 0) -16px 0px 48px 0px;
+  padding: 40px 0;
+  > p {
+    font-size: 30px;
     text-align: center;
-    color: #08fdd8;
+    color: #fff;
     padding: 20px 0;
   }
 `
+
+const WorkTypes = styled.div`
+  margin: 0 auto;
+  > button {
+    background: none;
+    font-size: 16px;
+    color: #eee;
+    border: none;
+    padding: 10px 15px 20px 15px;
+  }
+`
+
 const PortfolioList = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 0 30px;
 `
 
 const PortfolioItem = styled.div`
-  width: 400px;
+  // width: 400px;
   display: flex;
   text-align: center;
   flex-direction: column;
   border: solid 1px rgb(99, 97, 97);
   background: #a3a3a3;
-  margin-top: 15px;
+  margin: 15px 5px 0 5px;
   > h3 {
-    font-size: 25px;
-    padding: 20px 0;
+    font-size: 20px;
+    padding: 10px 0;
   }
   p {
     padding: 10px;

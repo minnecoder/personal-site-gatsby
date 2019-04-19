@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import media from '../components/media'
 
 const Main = styled.div`
   display: flex;
@@ -23,6 +24,9 @@ const Blog = styled.div`
   justify-content: space-around;
   flex: 1 100%;
   margin-top: 12vh;
+  ${media.tablet`
+  height: 100%;
+  `}
 `
 
 const BlogIndex = styled.div`

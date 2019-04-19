@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 import Header from '../components/header'
 import Home from '../components/home'
 import Work from '../components/work'
@@ -20,7 +21,6 @@ const Main = styled.div`
 
 const IndexPage = ({ data }) => {
   const { edges: projectImgData } = data.ProjectImgs
-  console.log({ edges: projectImgData })
   return (
     <Main>
       <Helmet title="Sean Parkin" />
@@ -35,6 +35,10 @@ const IndexPage = ({ data }) => {
 }
 
 export default IndexPage
+
+IndexPage.propTypes = {
+  data: PropTypes.object,
+}
 
 export const query = graphql`
   query allImgsQuery {

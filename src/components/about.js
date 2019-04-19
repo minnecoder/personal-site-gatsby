@@ -7,13 +7,21 @@ const BEskills = ['Node JS', 'Express JS', 'MongoDB', 'MySQL', 'APIs']
 const OtherSkills = ['GitHub']
 
 const AboutSection = styled.div`
-  padding: 8vh 0;
-  background-color: #222222;
-  font-family: Helvetica, sans-serif;
+  padding-top: 12vh;
+  background-color: #100e17;
+  font-family: 'Montserrat', sans-serif;
   color: white;
 `
+const AboutContainer = styled.div`
+  width: 70%;
+  background: #202026;
+  margin: 0 auto;
+  padding: 30px 0;
+  box-shadow: rgb(0, 0, 0) -16px 0px 48px 0px;
+`
+
 const About = styled.div`
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   > p {
@@ -22,10 +30,9 @@ const About = styled.div`
 `
 
 const AboutHeader = styled.h1`
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
   margin-bottom: 20px;
-  color: #08fdd8;
 `
 
 const Skills = styled.div`
@@ -54,45 +61,47 @@ const SkillsSection = styled.div`
 
 const AboutPage = () => (
   <AboutSection id="about">
-    <AboutHeader>About</AboutHeader>
-    <About>
-      <p>
-        Hi! My name is Sean Parkin, I am a recent graduate of the Web Programming track at Rasmussen College. With all
-        of the information that I learned while in college and the projects that I have worked, I am looking to start my
-        career as a web developer.
-      </p>
-    </About>
+    <AboutContainer>
+      <AboutHeader>About</AboutHeader>
+      <About>
+        <p>
+          Hi! My name is Sean Parkin, I am a recent graduate of the Web Programming track at Rasmussen College. With all
+          of the information that I learned while in college and the projects that I have worked, I am looking to start
+          my career as a web developer.
+        </p>
+      </About>
 
-    <Skills>
-      <h4>Skills</h4>
-      <SkillsSection>
-        <FaDesktop size={56} color="#08fdd860" />
-        <h2>Front End Skills</h2>
-        <ul>
-          {FEskills.map(skill => (
-            <li key={skill}>{skill}</li>
-          ))}
-        </ul>
-      </SkillsSection>
-      <SkillsSection>
-        <FaServer size={56} color="#08fdd860" />
-        <h2>Back End Skills</h2>
-        <ul>
-          {BEskills.map(skill => (
-            <li key={skill}>{skill}</li>
-          ))}
-        </ul>
-      </SkillsSection>
-      <SkillsSection>
-        <FaWrench size={56} color="#08fdd860" />
-        <h2>Tools</h2>
-        <ul>
-          {OtherSkills.map(skill => (
-            <li key={skill}>{skill}</li>
-          ))}
-        </ul>
-      </SkillsSection>
-    </Skills>
+      <Skills>
+        <h4>Skills</h4>
+        <SkillsSection>
+          <FaDesktop size={56} color="#08fdd860" />
+          <h2>Front End Skills</h2>
+          <ul>
+            {FEskills.map(skill => (
+              <li key={skill}>{skill}</li>
+            ))}
+          </ul>
+        </SkillsSection>
+        <SkillsSection>
+          <FaServer size={56} color="#08fdd860" />
+          <h2>Back End Skills</h2>
+          <ul>
+            {BEskills.map(skill => (
+              <li key={skill}>{skill}</li>
+            ))}
+          </ul>
+        </SkillsSection>
+        <SkillsSection>
+          <FaWrench size={56} color="#08fdd860" />
+          <h2>Tools</h2>
+          <ul>
+            {OtherSkills.map(skill => (
+              <li key={skill}>{skill}</li>
+            ))}
+          </ul>
+        </SkillsSection>
+      </Skills>
+    </AboutContainer>
   </AboutSection>
 )
 
