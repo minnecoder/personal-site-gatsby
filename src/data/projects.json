@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Project 1",
+    "description": "This is just a test app, nothing to see here!",
+    "img": "tech.png",
+    "url": "https://www.google.com",
+    "technologies": "Node, HTML",
+    "github": "https://github.com/minnecoder/",
+    "website": "https://www.seanparkin.com"
+  }
+]
