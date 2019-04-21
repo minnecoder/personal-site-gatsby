@@ -21,12 +21,13 @@ const Main = styled.div`
 
 const IndexPage = ({ data }) => {
   const { edges: projectImgData } = data.ProjectImgs
+  const { edges: iconImgData } = data.IconImgs
   return (
     <Main>
       <Helmet title="Sean Parkin" />
       <Home />
       <Header />
-      <About />
+      <About iconImgs={iconImgData} />
       <Work projectImgs={projectImgData} />
       <Contact />
       <Footer />
@@ -74,7 +75,7 @@ export const query = graphql`
         }
       }
     }
-    HobbyImgs: allFile(
+    IconImgs: allFile(
       sort: { order: ASC, fields: [absolutePath] }
       filter: { relativePath: { regex: "/icons/.*.png/" } }
     ) {
@@ -83,7 +84,7 @@ export const query = graphql`
           relativePath
           name
           childImageSharp {
-            sizes(maxWidth: 40) {
+            sizes(maxWidth: 64) {
               ...GatsbyImageSharpSizes
             }
           }
