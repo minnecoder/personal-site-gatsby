@@ -3,11 +3,6 @@ import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import styled from 'styled-components'
 
 const ContactArea = styled.div`
-  // padding-top: 12vh;
-  // padding-bottom: 30vh;
-  // height: 100%;
-
-  // background: #100e17;
   font-family: 'Poppins', sans-serif;
 `
 const ContactSect = styled.div`
@@ -16,7 +11,6 @@ const ContactSect = styled.div`
   margin: 0 auto;
   overflow: hidden;
   text-align: center;
-  background: #eee;
 
   > p {
     font-size: 20px;

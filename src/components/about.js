@@ -1,17 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+import media from './media'
 
 const FEskills = ['HTML/CSS', 'JavaScript', 'React', 'Gatsby']
 const BEskills = ['Node JS', 'Express JS', 'MongoDB', 'MySQL']
 const OtherSkills = ['GitHub', 'APIs', 'Sass', 'Bootstrap']
 
 const AboutSection = styled.div`
-  padding-top: 8vh;
+  padding: 60px 0;
   font-family: 'Poppins', sans-serif;
+  background: #fff;
 `
 const AboutContainer = styled.div`
   width: 70%;
-  background: #eee;
+  // background: #eee;
   margin: 0 auto;
   padding: 30px 0;
   > h1 {
@@ -34,6 +36,9 @@ const Skills = styled.div`
   width: 70%;
   margin: 0 auto;
   overflow: hidden;
+  ${media.plusphone`
+  width: 100%;
+  `}
   > h1 {
     font-size: 30px;
     text-align: center;
@@ -50,10 +55,16 @@ const SkillsSection = styled.div`
   > h2 {
     padding: 10px 0px;
     font-size: 20px;
+    ${media.plusphone`
+    font-size: 16px;
+    `}
   }
   li {
     list-style-type: none;
     padding: 2px 0px;
+    ${media.plusphone`
+    width: 50%;
+    `}
   }
 `
 

@@ -9,7 +9,7 @@ const HomeSect = styled.div`
   background-size: cover;
   opacity: 0.8;
   position: relative;
-  margin-top: 8vh;
+  // padding-top: 8vh;
   z-index: 1;
 `
 

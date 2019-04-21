@@ -3,12 +3,10 @@ import styled from 'styled-components'
 
 const FooterSect = styled.div`
   height: 8vh;
-  background-color: #fff;
+  background-color: #ddd;
   width: 100%;
   position: absolute;
   bottom: 0;
-
-  // position: relative;
   font-family: 'Poppins', Helvetica, sans-serif;
   > p {
     text-align: center;

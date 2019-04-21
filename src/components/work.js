@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import projects from '../data/projects.json'
 import pic from '../images/projects/tech.png'
+import media from './media'
 
 class Work extends Component {
   render() {
@@ -25,17 +26,18 @@ class Work extends Component {
               const imageSizes = image.node.childImageSharp.sizes
               return (
                 <PortfolioItem key={project.name}>
-                  <h3>{project.name}</h3>
                   <Img title={project.name} alt=" Image of project" sizes={imageSizes} />
-                  <p>{project.description}</p>
-                  <p>
-                    <strong>Technologies Used:</strong> {project.technologies}
-                  </p>
-
-                  <WorkBtns>
-                    <WorkBtn href={project.website}>Website</WorkBtn>
-                    <WorkBtn href={project.github}>GitHub</WorkBtn>
-                  </WorkBtns>
+                  <Overlay>
+                    <h3>{project.name}</h3>
+                    <p>{project.description}</p>
+                    <p>
+                      <strong>Technologies Used:</strong> {project.technologies}
+                    </p>
+                    <WorkBtns>
+                      <WorkBtn href={project.website}>Website</WorkBtn>
+                      <WorkBtn href={project.github}>GitHub</WorkBtn>
+                    </WorkBtns>
+                  </Overlay>
                 </PortfolioItem>
               )
             })}
@@ -48,19 +50,17 @@ class Work extends Component {
 export default Work
 
 const PortfolioSection = styled.div`
-  padding-bottom: 12vh;
-  padding-top: 12vh;
-  background: #fff;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  background: #eee;
   font-family: 'Poppins', sans-serif;
   font-size: 0.9em;
 `
 const Portfolio = styled.div`
-  width: 70%;
   margin: 0 auto;
   justify-items: center;
   display: flex;
   flex-direction: column;
-  background: #eee;
   padding: 40px 0;
   > h1 {
     font-size: 30px;
@@ -85,37 +85,59 @@ const PortfolioList = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: 0 30px;
+  justify-content: start;
+`
+
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #08fdd8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  > h3 {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  p {
+  }
 `
 
 const PortfolioItem = styled.div`
-  width: 400px;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  border: solid 1px rgb(99, 97, 97);
-  background: #a3a3a3;
-  margin: 15px 5px 0 5px;
-  > h3 {
-    font-size: 20px;
-    padding: 10px 0;
+  position: relative;
+  width: 33.33%;
+  ${media.desktop`
+  width: 50%;
+  `}
+  ${media.plusphone`
+  width: 100%;
+  `}
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
-  p {
-    padding: 10px;
+  &:hover ${Overlay} {
+    opacity: 1;
   }
 `
 
 const WorkBtns = styled.div`
   order: 2;
-  padding: 20px;
-  display: flex;
-  justify-content: space-around;
+  padding-bottom: 30px;
 `
 
 const WorkBtn = styled.a`
-  padding: 0 40px;
-  background: #08fdd860;
+  margin: 0 20px;
+  background: #fff;
   border: solid 1px #08fdd860;
   border-radius: 4px;
   padding: 6px 25px;
