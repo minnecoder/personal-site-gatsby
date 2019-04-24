@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "GitHub",
+    "img": "github.png"
+  },
+  {
+    "id": 2,
+    "name": "Sass",
+    "img": "sass.png"
+  },
+  {
+    "id": 3,
+    "name": "Bootstrap",
+    "img": "bootstrap.png"
+  }
+]

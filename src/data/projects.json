@@ -13,7 +13,7 @@
     "id": 2,
     "name": "Project 2",
     "description": "This is just a test app, nothing to see here!",
-    "img": "tech.png",
+    "img": "mountains.png",
     "url": "https://www.google.com",
     "technologies": "Node, HTML",
     "github": "https://github.com/minnecoder/",

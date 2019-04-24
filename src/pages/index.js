@@ -19,27 +19,19 @@ const Main = styled.div`
   position: relative;
 `
 
-const IndexPage = ({ data }) => {
-  const { edges: projectImgData } = data.ProjectImgs
-  const { edges: iconImgData } = data.IconImgs
-  return (
-    <Main>
-      <Helmet title="Sean Parkin" />
-      <Home />
-      <Header />
-      <About iconImgs={iconImgData} />
-      <Work projectImgs={projectImgData} />
-      <Contact />
-      <Footer />
-    </Main>
-  )
-}
+const IndexPage = () => (
+  <Main>
+    <Helmet title="Sean Parkin" />
+    <Home />
+    <Header />
+    <About />
+    <Work />
+    <Contact />
+    <Footer />
+  </Main>
+)
 
 export default IndexPage
-
-IndexPage.propTypes = {
-  data: PropTypes.object,
-}
 
 export const query = graphql`
   query allImgsQuery {
@@ -49,32 +41,7 @@ export const query = graphql`
         description
       }
     }
-    coverImg: imageSharp(id: { regex: "/AirBalloon/" }) {
-      sizes(maxWidth: 1200) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    profileImg: imageSharp(id: { regex: "/Maribel/" }) {
-      sizes(maxWidth: 420, maxHeight: 630) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    ProjectImgs: allFile(
-      sort: { order: ASC, fields: [absolutePath] }
-      filter: { relativePath: { regex: "/projects/.*.png/" } }
-    ) {
-      edges {
-        node {
-          relativePath
-          name
-          childImageSharp {
-            sizes(maxWidth: 320) {
-              ...GatsbyImageSharpSizes
-            }
-          }
-        }
-      }
-    }
+
     IconImgs: allFile(
       sort: { order: ASC, fields: [absolutePath] }
       filter: { relativePath: { regex: "/icons/.*.png/" } }

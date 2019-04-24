@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "HTML",
+    "img": "html.png"
+  },
+  {
+    "id": 2,
+    "name": "CSS",
+    "img": "css.png"
+  },
+  {
+    "id": 3,
+    "name": "JavaScript",
+    "img": "javascript.png"
+  },
+  {
+    "id": 4,
+    "name": "React",
+    "img": "react.png"
+  },
+  {
+    "id": 5,
+    "name": "Gatsby",
+    "img": "gatsby.png"
+  }
+]

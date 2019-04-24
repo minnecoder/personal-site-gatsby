@@ -3,7 +3,10 @@ module.exports = {
       "wesbos"
     ],
     "rules": {
-      "no-console": 2,
+      "no-console": 1,
+      "prefer-destructuring": 0,
+      "react/destructuring-assignment": 0,
+      "react/prop-types": 1,
       "prettier/prettier": [
         "error",
         {

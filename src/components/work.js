@@ -1,16 +1,30 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import { StaticQuery, graphql } from 'gatsby'
 import projects from '../data/projects.json'
-import pic from '../images/projects/tech.png'
 import media from './media'
 
-class Work extends Component {
-  render() {
-    const projectI = this.props
-    const { projectImgs } = projectI
-
-    return (
+const Work = () => (
+  <StaticQuery
+    query={graphql`
+      {
+        allFile(filter: { relativeDirectory: { eq: "projects" } }) {
+          edges {
+            node {
+              name
+              relativePath
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  tracedSVG
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
       <PortfolioSection id="work">
         <Portfolio>
           <h1>Recent Work</h1>
@@ -19,34 +33,28 @@ class Work extends Component {
             <button type="button">Front End</button>
             <button type="button">Back End</button>
           </WorkTypes>
-
+          {/* {console.log(data)} */}
           <PortfolioList>
-            {projects.map(project => {
-              const image = projectImgs.find(n => n.node.relativePath === `projects/${project.img}`)
-              const imageSizes = image.node.childImageSharp.sizes
-              return (
-                <PortfolioItem key={project.name}>
-                  <Img title={project.name} alt=" Image of project" sizes={imageSizes} />
-                  <Overlay>
-                    <h3>{project.name}</h3>
-                    <p>{project.description}</p>
-                    <p>
-                      <strong>Technologies Used:</strong> {project.technologies}
-                    </p>
-                    <WorkBtns>
-                      <WorkBtn href={project.website}>Website</WorkBtn>
-                      <WorkBtn href={project.github}>GitHub</WorkBtn>
-                    </WorkBtns>
-                  </Overlay>
-                </PortfolioItem>
-              )
-            })}
+            <PortfolioItem>
+              {/* <Img title={} alt=" Image of project" sizes={imageSizes} /> */}
+              <Overlay>
+                <p />
+                <p>
+                  <strong>Technologies Used:</strong>
+                </p>
+                <WorkBtns>
+                  <WorkBtn href={1}>Website</WorkBtn>
+                  <WorkBtn href={1}>GitHub</WorkBtn>
+                </WorkBtns>
+              </Overlay>
+            </PortfolioItem>
           </PortfolioList>
         </Portfolio>
       </PortfolioSection>
-    )
-  }
-}
+    )}
+  />
+)
+
 export default Work
 
 const PortfolioSection = styled.div`
