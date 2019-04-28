@@ -32,31 +32,3 @@ const IndexPage = () => (
 )
 
 export default IndexPage
-
-export const query = graphql`
-  query allImgsQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-
-    IconImgs: allFile(
-      sort: { order: ASC, fields: [absolutePath] }
-      filter: { relativePath: { regex: "/icons/.*.png/" } }
-    ) {
-      edges {
-        node {
-          relativePath
-          name
-          childImageSharp {
-            sizes(maxWidth: 64) {
-              ...GatsbyImageSharpSizes
-            }
-          }
-        }
-      }
-    }
-  }
-`

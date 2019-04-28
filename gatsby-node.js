@@ -6,19 +6,19 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const postTemplate = path.resolve('src/templates/post.js')
 
   return graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            html
-            frontmatter {
-              path
-              title
-            }
-          }
-        }
-      }
-    }
+    // {
+    //   allMarkdownRemark {
+    //     edges {
+    //       node {
+    //         html
+    //         frontmatter {
+    //           path
+    //           title
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   `).then(res => {
     if (res.errors) {
       return Promise.reject(res.errors)

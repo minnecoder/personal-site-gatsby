@@ -7,7 +7,7 @@
   "dependencies": {
     "@hot-loader/react-dom": "github:hot-loader/react-dom",
     "babel-plugin-styled-components": "^1.10.0",
-    "gatsby": "^2.3.22",
+    "gatsby": "^2.3.32",
     "gatsby-cli": "^2.5.7",
     "gatsby-image": "^2.0.38",
     "gatsby-plugin-catch-links": "^2.0.13",
@@ -17,7 +17,7 @@
     "gatsby-plugin-sharp": "^2.0.34",
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-source-filesystem": "^2.0.29",
-    "gatsby-transformer-remark": "^2.3.8",
+    "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.18",
     "graphql": "^14.1.1",
     "i": "^0.3.6",

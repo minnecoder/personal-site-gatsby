@@ -19,8 +19,8 @@ const AboutPage = () => (
               name
               relativePath
               childImageSharp {
-                fluid(maxWidth: 128) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 64, height: 64) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
@@ -32,8 +32,8 @@ const AboutPage = () => (
               name
               relativePath
               childImageSharp {
-                fluid(maxWidth: 128) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 64, height: 64) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
@@ -45,8 +45,8 @@ const AboutPage = () => (
               name
               relativePath
               childImageSharp {
-                fluid(maxWidth: 128) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 72, height: 64) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
@@ -64,63 +64,23 @@ const AboutPage = () => (
             also. I am currently heavy into the React ecosystem.
           </p>
         </div>
-        <Skills>
+        <div className="skills">
           <h1>Skills</h1>
-          <SkillsSection>
+          <div className="skills-section">
             <h2>Front End Skills</h2>
-            {data.front.edges.map(({ node }, i) => (
-              <SkillItem>
-                <Img key={i} fluid={node.childImageSharp.fluid} />
-                <p>{node.name}</p>
-              </SkillItem>
-            ))}
-          </SkillsSection>
-          <SkillsSection>
+            <div />
+          </div>
+          <div className="skills-section">
             <h2>Back End Skills</h2>
-            {data.back.edges.map(({ node }, i) => (
-              <SkillItem>
-                <Img key={i} fluid={node.childImageSharp.fluid} />
-                <p>{node.name}</p>
-              </SkillItem>
-            ))}
-          </SkillsSection>
-          <SkillsSection>
-            <h2>Tools</h2>
-            {data.tools.edges.map(({ node }, i) => (
-              <SkillItem>
-                <Img key={i} fluid={node.childImageSharp.fluid} />
-                <p>{node.name}</p>
-              </SkillItem>
-            ))}
-          </SkillsSection>
-        </Skills>
+          </div>
+          <div className="skills-section" />
+        </div>
       </div>
     )}
   />
 )
 
 export default AboutPage
-
-const AboutSection = styled.div`
-  display: flex;
-
-  padding: 60px 0;
-  font-family: 'Poppins', sans-serif;
-  background: #fff;
-`
-
-const About = styled.div`
-  width: 70%;
-  margin: 0 auto;
-  > p {
-    padding: 20px;
-  }
-  h1 {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-`
 
 const Skills = styled.div`
   display: flex;
