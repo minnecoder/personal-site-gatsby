@@ -1,19 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
 import Img from 'gatsby-image'
-import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import media from './media'
 import './about.css'
-// import FEicons from '../data/FEicons.json'
-// import BEicons from '../data/BEicons.json'
-// import Toolsicons from '../data/Toolsicons.json'
 
 const AboutPage = () => (
   <StaticQuery
     query={graphql`
       {
-        front: allFile(filter: { relativeDirectory: { eq: "icons/front" } }) {
+        front: allFile(sort: { order: ASC, fields: [id] }, filter: { relativePath: { regex: "icons/front.*.png/" } }) {
           edges {
             node {
               name
@@ -45,7 +39,7 @@ const AboutPage = () => (
               name
               relativePath
               childImageSharp {
-                fixed(width: 72, height: 64) {
+                fixed(width: 64, height: 64) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -54,74 +48,72 @@ const AboutPage = () => (
         }
       }
     `}
-    render={data => (
-      <div id="about">
-        <div className="about">
-          <h1>About</h1>
-          <p>
-            Hi! My name is Sean Parkin, as a recent college graduate, I am looking to either get hired on at a company
-            or start a career in freelancing. I have made websites and have also made the back end part of websites
-            also. I am currently heavy into the React ecosystem.
-          </p>
-        </div>
-        <div className="skills">
-          <h1>Skills</h1>
-          <div className="skills-section">
-            <h2>Front End Skills</h2>
-            <div />
+    render={data => {
+      const FEimages = data.front.edges
+      const BEimages = data.back.edges
+      const Toolimages = data.tools.edges
+      return (
+        <div id="about">
+          <div className="about">
+            <h1>About</h1>
+            <p>
+              Hi! My name is Sean Parkin, as a recent college graduate, I am looking to either get hired on at a company
+              or start a career in freelancing. I have made websites and have also made the back end part of websites
+              also. I am currently heavy into the React ecosystem.
+            </p>
           </div>
-          <div className="skills-section">
-            <h2>Back End Skills</h2>
+          <div className="skills">
+            <h1>Skills</h1>
+            <div className="skills-section">
+              <h2>Front End Skills</h2>
+              <div className="skill-items">
+                {FEimages.map(({ node }) => (
+                  <div className="skill-item">
+                    <div>
+                      <Img fixed={node.childImageSharp.fixed} />
+                    </div>
+                    <div>
+                      <p>{node.name}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="skills-section">
+              <h2>Back End Skills</h2>
+              <div className="skill-items">
+                {BEimages.map(({ node }) => (
+                  <div className="skill-item">
+                    <div>
+                      <Img fixed={node.childImageSharp.fixed} />
+                    </div>
+                    <div>
+                      <p>{node.name}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="skills-section">
+              <h2>Tools</h2>
+              <div className="skill-items">
+                {Toolimages.map(({ node }) => (
+                  <div className="skill-item">
+                    <div>
+                      <Img fixed={node.childImageSharp.fixed} />
+                    </div>
+                    <div>
+                      <p>{node.name}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="skills-section" />
         </div>
-      </div>
-    )}
+      )
+    }}
   />
 )
 
 export default AboutPage
-
-const Skills = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  width: 70%;
-  margin: 0 auto;
-  overflow: hidden;
-  ${media.plusphone`
-  width: 100%;
-  `}
-  > h1 {
-    font-size: 30px;
-    text-align: center;
-    padding: 20px 0;
-  }
-  p {
-  }
-`
-const SkillItem = styled.div`
-  width: 48px;
-`
-
-const SkillsSection = styled.div`
-  text-align: center;
-  > h2 {
-    padding: 10px 0px;
-    font-size: 20px;
-    ${media.plusphone`
-    font-size: 16px;
-    `}
-  }
-  // ${SkillItem} {
-  //   display: flex;
-  //   flex-direction: row;
-  // }
-  li {
-    list-style-type: none;
-    padding: 2px 0px;
-    ${media.plusphone`
-    width: 50%;
-    `}
-  }
-`
