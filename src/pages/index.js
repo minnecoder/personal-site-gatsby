@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
-import PropTypes from 'prop-types'
 import Header from '../components/header'
 import Home from '../components/home'
 import Work from '../components/work'

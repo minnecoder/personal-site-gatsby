@@ -1,57 +1,78 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
-import projects from '../data/projects.json'
 import media from './media'
 
 const Work = () => (
   <StaticQuery
     query={graphql`
       {
-        allFile(filter: { relativeDirectory: { eq: "projects" } }) {
+        allFile(filter: { relativePath: { regex: "/projects/.*.(png|gif|jpeg|jpg)/" } }) {
           edges {
             node {
-              name
               relativePath
               childImageSharp {
-                fluid(maxWidth: 400) {
-                  tracedSVG
+                fluid(maxWidth: 500) {
+                  src
                 }
               }
             }
           }
         }
+        allProjectsJson {
+          edges {
+            node {
+              name
+              description
+              img
+              tech
+              github
+              website
+            }
+          }
+        }
       }
     `}
-    render={data => (
-      <PortfolioSection id="work">
-        <Portfolio>
-          <h1>Recent Work</h1>
-          <WorkTypes>
-            <button type="button">All</button>
-            <button type="button">Front End</button>
-            <button type="button">Back End</button>
-          </WorkTypes>
-          {/* {console.log(data)} */}
-          <PortfolioList>
-            <PortfolioItem>
-              {/* <Img title={} alt=" Image of project" sizes={imageSizes} /> */}
-              <Overlay>
-                <p />
-                <p>
-                  <strong>Technologies Used:</strong>
-                </p>
-                <WorkBtns>
-                  <WorkBtn href={1}>Website</WorkBtn>
-                  <WorkBtn href={1}>GitHub</WorkBtn>
-                </WorkBtns>
-              </Overlay>
-            </PortfolioItem>
-          </PortfolioList>
-        </Portfolio>
-      </PortfolioSection>
-    )}
+    render={data => {
+      const portfolioData = data.allProjectsJson.edges
+      const portfolioImages = data.allFile.edges
+      return (
+        <PortfolioSection id="work">
+          <Portfolio>
+            <h1>Recent Work</h1>
+            <WorkTypes>
+              <button type="button">All</button>
+              <button type="button">Front End</button>
+              <button type="button">Back End</button>
+            </WorkTypes>
+
+            <PortfolioList>
+              {portfolioData.map(({ node }) => {
+                const image = portfolioImages.find(n => n.node.relativePath === `projects/${node.img}`)
+                const imgSrc = image.node.childImageSharp.fluid.src
+                return (
+                  <div className="PortfolioItem">
+                    {/* <Img title={} alt=" Image of project" sizes={imageSizes} /> */}
+                    <div className="Overlay">
+                      <h3>{node.name}</h3>
+                      <p>{node.description}</p>
+                      <p>
+                        <strong>Technologies Used:</strong>
+                        {node.tech}
+                      </p>
+                      <WorkBtns>
+                        <WorkBtn href={node.website}>Website</WorkBtn>
+                        <WorkBtn href={node.github}>GitHub</WorkBtn>
+                      </WorkBtns>
+                    </div>
+                  </div>
+                )
+              })}
+            </PortfolioList>
+          </Portfolio>
+        </PortfolioSection>
+      )
+    }}
   />
 )
 
@@ -96,47 +117,47 @@ const PortfolioList = styled.div`
   justify-content: start;
 `
 
-const Overlay = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: #08fdd8;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  > h3 {
-    font-size: 20px;
-    padding-top: 20px;
-  }
-  p {
-  }
-`
+// const Overlay = styled.div`
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   height: 100%;
+//   width: 100%;
+//   opacity: 0;
+//   transition: 0.5s ease;
+//   background-color: #fff;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+//   > h3 {
+//     font-size: 20px;
+//     padding-top: 20px;
+//   }
+//   p {
+//   }
+// `
 
-const PortfolioItem = styled.div`
-  position: relative;
-  width: 33.33%;
-  ${media.desktop`
-  width: 50%;
-  `}
-  ${media.plusphone`
-  width: 100%;
-  `}
-  > img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  &:hover ${Overlay} {
-    opacity: 1;
-  }
-`
+// const PortfolioItem = styled.div`
+//   position: relative;
+//   width: 33.33%;
+//   ${media.desktop`
+//   width: 50%;
+//   `}
+//   ${media.plusphone`
+//   width: 100%;
+//   `}
+//   > img {
+//     display: block;
+//     width: 100%;
+//     height: auto;
+//   }
+//   &:hover ${Overlay} {
+//     opacity: 1;
+//   }
+// `
 
 const WorkBtns = styled.div`
   order: 2;

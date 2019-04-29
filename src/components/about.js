@@ -1,6 +1,6 @@
 import React from 'react'
-import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
+import SkillSection from './SkillsSection'
 import './about.css'
 
 const AboutPage = () => (
@@ -64,51 +64,9 @@ const AboutPage = () => (
           </div>
           <div className="skills">
             <h1>Skills</h1>
-            <div className="skills-section">
-              <h2>Front End Skills</h2>
-              <div className="skill-items">
-                {FEimages.map(({ node }) => (
-                  <div className="skill-item">
-                    <div>
-                      <Img fixed={node.childImageSharp.fixed} />
-                    </div>
-                    <div>
-                      <p>{node.name}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="skills-section">
-              <h2>Back End Skills</h2>
-              <div className="skill-items">
-                {BEimages.map(({ node }) => (
-                  <div className="skill-item">
-                    <div>
-                      <Img fixed={node.childImageSharp.fixed} />
-                    </div>
-                    <div>
-                      <p>{node.name}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="skills-section">
-              <h2>Tools</h2>
-              <div className="skill-items">
-                {Toolimages.map(({ node }) => (
-                  <div className="skill-item">
-                    <div>
-                      <Img fixed={node.childImageSharp.fixed} />
-                    </div>
-                    <div>
-                      <p>{node.name}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <SkillSection imgData={FEimages} />
+            <SkillSection imgData={BEimages} />
+            <SkillSection imgData={Toolimages} />
           </div>
         </div>
       )
