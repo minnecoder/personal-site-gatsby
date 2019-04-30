@@ -39,7 +39,7 @@ const Navlink = styled(Link)`
   color: #38384f;
   padding: 0 1.5rem;
   &:hover {
-    border-bottom: 2px solid #08fdd8;
+    border-bottom: 2px solid #18a4e0;
   }
 `
 const Header = () => (

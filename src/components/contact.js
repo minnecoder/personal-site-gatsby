@@ -35,7 +35,12 @@ const SocialLinks = styled.div`
   }
 `
 
-const SocialLink = styled.a``
+const SocialLink = styled.a`
+  color: #111  
+&:hover {
+    color: #0253b3;
+  }
+`
 
 const Contact = () => (
   <ContactArea id="contact">
@@ -47,7 +52,7 @@ const Contact = () => (
       </p>
       <SocialLinks>
         <SocialLink href="https://twitter.com/minnecoder">
-          <FaTwitter size={42} color="#1da1f2" />
+          <FaTwitter size={42} color="#1da1f2" hover="#0253b3" />
         </SocialLink>
         <SocialLink href="https://www.linkedin.com/in/seanparkin/">
           <FaLinkedin size={42} color="#0073b1" />

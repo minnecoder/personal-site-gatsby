@@ -30,23 +30,33 @@ const Blog = styled.div`
 `
 
 const BlogIndex = styled.div`
-  background: #eee;
   width: 15%;
   height: 60%;
+  border-style: solid;
+  border-color: #d4d4d4;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
   text-align: center;
   > h3 {
     padding: 10px 0;
   }
 `
 const IndexLink = styled(Link)`
-  color: #38384f;
+  color: #18a4e0;
   text-decoration: none;
-  padding: 5px 0;
+  // margin: 2rem 0;
+  &:hover {
+    color: #0253b3;
+  }
 `
 
 const EntryLink = styled(Link)`
-  color: #3b3b4f;
+  color: #18a4e0;
   text-decoration: none;
+  &:hover {
+    color: #0253b3;
+  }
 `
 
 const BlogEntries = styled.div`
@@ -55,11 +65,14 @@ const BlogEntries = styled.div`
 `
 
 const BlogEntry = styled.div`
-  background: #eee;
-  padding: 25px;
-  margin-bottom: 50px;
+  border-style: solid;
+  border-color: #d4d4d4;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
   > p {
-    padding: 8px 0;
+    padding: 0.7rem 0;
     font-style: italic;
   }
 `

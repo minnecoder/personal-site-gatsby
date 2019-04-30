@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import PortfolioItem from './PortfolioItem'
-import media from './media'
+// import media from './media'
 
 const Work = () => (
   <StaticQuery
@@ -41,11 +41,6 @@ const Work = () => (
         <PortfolioSection id="work">
           <Portfolio>
             <h1>Recent Work</h1>
-            <WorkTypes>
-              <button type="button">All</button>
-              <button type="button">Front End</button>
-              <button type="button">Back End</button>
-            </WorkTypes>
 
             <PortfolioList>
               {portfolioData.map(({ node }) => {
@@ -81,17 +76,6 @@ const Portfolio = styled.div`
     text-align: center;
     color: #38384f;
     padding: 20px 0;
-  }
-`
-
-const WorkTypes = styled.div`
-  margin: 0 auto;
-  > button {
-    background: none;
-    font-size: 16px;
-    color: #38384f;
-    border: none;
-    padding: 10px 15px 20px 15px;
   }
 `
 

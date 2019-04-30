@@ -16,7 +16,6 @@ const PostContainer = styled.div`
 
 const BlogPost = styled.div`
   flex: 1;
-  background: #eee;
   width: 80%;
   margin: 0 auto;
   padding: 12vh 8vh;
