@@ -99,6 +99,7 @@ const AboutSection = styled.div`
 `
 const Skills = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   > 
 `
