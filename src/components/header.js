@@ -19,8 +19,9 @@ const Navbar = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
-  ${media.tablet`
+  ${media.plusphone`
   flex-direction: column;
+  justify-content: center;
   `}
 `
 
@@ -30,9 +31,18 @@ const LogoLink = styled(Link)`
   font-weight: bold;
   color: #38384f;
   padding-left: 4rem;
+
+  ${media.plusphone`
+  margin: 0 auto;
+  padding: 0;
+  `}
 `
 const Navlinks = styled.div`
   padding-right: 4rem;
+  ${media.tablet`
+   padding: 0;
+   margin-top: 0.2rem;
+  `}
 `
 const Navlink = styled(Link)`
   text-decoration: none;
@@ -41,6 +51,12 @@ const Navlink = styled(Link)`
   &:hover {
     border-bottom: 2px solid #18a4e0;
   }
+  ${media.tablet`
+  padding: 0 0.8rem;
+  `}
+  ${media.plusphone`
+  padding: 0 0.4rem;
+  `}
 `
 const Header = () => (
   <Nav>

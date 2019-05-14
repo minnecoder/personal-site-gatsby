@@ -10,16 +10,19 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  position: relative;
   background: #fff;
   font-family: 'Poppins', sans-serif;
   color: #38384f;
+  ${media.plusphone`
+  height: 100%;
+  position: relative;
+  `}
 `
 
 const Blog = styled.div`
   height: 100vh;
   display: flex;
+  flex: auto;
   flex-direction: row-reverse;
   justify-content: space-around;
   flex: 1 100%;
@@ -27,11 +30,14 @@ const Blog = styled.div`
   ${media.tablet`
   height: 100%;
   `}
+  ${media.plusphone`
+  flex-direction: column;
+  `}
 `
 
 const BlogIndex = styled.div`
   width: 15%;
-  height: 60%;
+  height: 40%;
   border-style: solid;
   border-color: #d4d4d4;
   border-radius: 0.5rem;

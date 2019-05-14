@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import media from './media'
 
 const PortfolioItem = ({ node, imgSrc }) => (
   <PortfolioContainer>
@@ -39,6 +40,10 @@ const PortfolioContainer = styled.div`
   padding: 0.5rem;
   margin-bottom: 2rem;
   font-size: 1rem;
+  ${media.tablet`
+  width: 80%;
+  flex-direction: column;
+  `}
 `
 
 const Image = styled.div`
@@ -60,9 +65,18 @@ const Info = styled.div`
 `
 
 const WorkBtns = styled.div`
+  display: flex;
   order: 2;
   margin: 0 auto;
   padding-top: 1.5rem;
+  ${media.tablet`
+  // flex-direction: column;
+    margin-top: 0.5rem;
+  `}
+  ${media.plusphone`
+  flex-direction: column;
+    margin-top: 0.5rem;
+  `}
 `
 
 const WorkBtn = styled.a`
@@ -75,5 +89,8 @@ const WorkBtn = styled.a`
   text-decoration: none;
   &:hover {
     background: #0253b3;
+  }
+  @media (max-width: 1024px) {
+    margin-top: 0.5rem;
   }
 `

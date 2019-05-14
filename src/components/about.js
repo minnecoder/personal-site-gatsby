@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import SkillSection from './SkillsSection'
+import media from './media'
 
 const AboutPage = () => (
   <StaticQuery
@@ -99,13 +100,16 @@ const AboutSection = styled.div`
 `
 const Skills = styled.div`
   display: flex;
-  flex-wrap: wrap;
   margin: 0 auto;
-  > 
+  ${media.tablet`
+  flex-direction: column;
+  `}
+  ${media.plusphone`
+  flex-wrap: wrap;
+  `}
 `
 const SkillsSection = styled.div`
   margin: 0 auto;
-
   > h2 {
     text-align: center;
     margin-bottom: 1rem;
