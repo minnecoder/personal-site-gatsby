@@ -10,7 +10,6 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #fff;
   font-family: 'Poppins', sans-serif;
   color: #38384f;
   ${media.plusphone`
@@ -47,6 +46,10 @@ const BlogIndex = styled.div`
   > h3 {
     padding: 10px 0;
   }
+  ${media.plusphone`
+  width: 80%;
+  margin: 0 auto;
+  `}
 `
 const IndexLink = styled(Link)`
   color: #18a4e0;
@@ -68,6 +71,9 @@ const EntryLink = styled(Link)`
 const BlogEntries = styled.div`
   padding: 20px;
   width: 70%;
+  ${media.plusphone`
+  width: 100%;
+  `}
 `
 
 const BlogEntry = styled.div`

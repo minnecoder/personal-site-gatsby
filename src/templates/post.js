@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import media from '../components/media'
 
 const PostContainer = styled.div`
   display: flex;
@@ -25,6 +26,10 @@ const BlogPost = styled.div`
     padding: 10px 0;
     font-style: italic;
   }
+  ${media.plusphone`
+  width: 100%;
+  
+  `}
 `
 
 const BlogPostContent = styled.div``
