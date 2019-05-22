@@ -10,12 +10,11 @@ const PortfolioItem = ({ node, imgSrc }) => (
     </Image>
     <Info>
       <h3>{node.name}</h3>
-      <p>
-        {node.description}
-        <br />
+      <ProjectDesc>{node.description}</ProjectDesc>
+      <ProjectTechStack>
         <strong>Technologies Used: </strong>
         {node.tech}
-      </p>
+      </ProjectTechStack>
 
       <WorkBtns>
         <WorkBtn href={node.website}>Website</WorkBtn>
@@ -55,6 +54,7 @@ const Info = styled.div`
   flex-basis: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   padding-left: 2.5rem;
   padding-right: 1rem;
@@ -62,6 +62,10 @@ const Info = styled.div`
     text-align: center;
     padding: 0.8rem 0;
   }
+`
+const ProjectDesc = styled.p``
+const ProjectTechStack = styled.p`
+  // margin-top: 0.2rem;
 `
 
 const WorkBtns = styled.div`
