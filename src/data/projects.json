@@ -16,14 +16,5 @@
     "tech": "React, Babel, Webpack, Sass",
     "github": "https://github.com/minnecoder/ReactFromScratch",
     "website": "https://github.com/minnecoder/ReactFromScratch"
-  },
-  {
-    "id": "3",
-    "name": "Project 3",
-    "description": "This is just a test app, nothing to see here!",
-    "img": "tech.png",
-    "tech": "Node, HTML",
-    "github": "https://github.com/minnecoder/",
-    "website": "https://www.seanparkin.com"
   }
 ]

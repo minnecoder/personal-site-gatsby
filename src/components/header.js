@@ -69,7 +69,7 @@ const Header = () => (
         <Navlink to="/#about">About</Navlink>
         <Navlink to="/#work">Portfolio</Navlink>
         <Navlink to="/#contact">Contact</Navlink>
-        <Navlink to="/blog">Blog</Navlink>
+        {/* <Navlink to="/blog">Blog</Navlink> */}
       </Navlinks>
     </Navbar>
   </Nav>
