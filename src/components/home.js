@@ -1,16 +1,33 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
+import { node } from 'prop-types'
 import mountains from '../images/white-building.jpg'
 
+const Home = ({ bgImage }) => (
+  <HomeSect id="home">
+    {' '}
+    {console.log(bgImage)}
+    <Img fluid={bgImage.childImageSharp.fluid} />
+    <HomeText>
+      <h2>Sean Parkin</h2>
+      <p>
+        Web Developer
+        <br />
+        Passion for Learning
+      </p>
+    </HomeText>
+  </HomeSect>
+)
+
+export default Home
+
 const HomeSect = styled.div`
-  height: 100vh;
-  background: url(${mountains});
-    no-repeat center center fixed;
-  background-size: cover;
-  opacity: 0.8;
+  height: 100%;
+
   position: relative;
   // padding-top: 8vh;
-  z-index: 1;
+  // z-index: 1;
 `
 
 const HomeText = styled.div`
@@ -31,18 +48,3 @@ const HomeText = styled.div`
     font-size: 1em;
   }
 `
-
-const Home = () => (
-  <HomeSect id="home">
-    <HomeText>
-      <h2>Sean Parkin</h2>
-      <p>
-        Web Developer
-        <br />
-        Passion for Learning
-      </p>
-    </HomeText>
-  </HomeSect>
-)
-
-export default Home

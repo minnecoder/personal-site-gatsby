@@ -3,6 +3,25 @@ import React from 'react'
 import styled from 'styled-components'
 import media from './media'
 
+const Header = () => (
+  <Nav>
+    <Navbar>
+      <LogoLink to="/">Sean Parkin</LogoLink>
+      <Navlinks>
+        <Navlink to="/#home" className="navlink">
+          Home
+        </Navlink>
+        <Navlink to="/#about">About</Navlink>
+        <Navlink to="/#work">Portfolio</Navlink>
+        <Navlink to="/#contact">Contact</Navlink>
+        {/* <Navlink to="/blog">Blog</Navlink> */}
+      </Navlinks>
+    </Navbar>
+  </Nav>
+)
+
+export default Header
+
 const Nav = styled.div`
   position: fixed;
   top: 0;
@@ -58,21 +77,3 @@ const Navlink = styled(Link)`
   padding: 0 0.4rem;
   `}
 `
-const Header = () => (
-  <Nav>
-    <Navbar>
-      <LogoLink to="/">Sean Parkin</LogoLink>
-      <Navlinks>
-        <Navlink to="/#home" className="navlink">
-          Home
-        </Navlink>
-        <Navlink to="/#about">About</Navlink>
-        <Navlink to="/#work">Portfolio</Navlink>
-        <Navlink to="/#contact">Contact</Navlink>
-        {/* <Navlink to="/blog">Blog</Navlink> */}
-      </Navlinks>
-    </Navbar>
-  </Nav>
-)
-
-export default Header
