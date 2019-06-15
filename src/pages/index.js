@@ -21,15 +21,53 @@ const IndexPage = () => (
             }
           }
         }
+        front: allFile(sort: { order: ASC, fields: [id] }, filter: { relativePath: { regex: "icons/front.*.png/" } }) {
+          edges {
+            node {
+              name
+              relativePath
+              childImageSharp {
+                fixed(width: 48, height: 48) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
+        back: allFile(filter: { relativeDirectory: { eq: "icons/back" } }) {
+          edges {
+            node {
+              name
+              relativePath
+              childImageSharp {
+                fixed(width: 48, height: 48) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
+        tools: allFile(filter: { relativeDirectory: { eq: "icons/tools" } }) {
+          edges {
+            node {
+              name
+              relativePath
+              childImageSharp {
+                fixed(width: 48, height: 48) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
       }
     `}
     render={data => (
       <Main>
         <Helmet title="Sean Parkin" />
-        {console.log(data)}
         <Home bgImage={data.bgImage} />
         <Header />
-        <About />
+        <About FEimages={data.front.edges} BEimages={data.back.edges} Toolimages={data.tools.edges} />
         <Work />
         <Contact />
         <Footer />

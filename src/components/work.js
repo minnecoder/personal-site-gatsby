@@ -46,7 +46,7 @@ const Work = () => (
               {portfolioData.map(({ node }) => {
                 const image = portfolioImages.find(n => n.node.relativePath === `projects/${node.img}`)
                 const imgSrc = image.node.childImageSharp.fluid.src
-                return <PortfolioItem node={node} imgSrc={imgSrc} />
+                return <PortfolioItem node={node} imgSrc={imgSrc} key={node.name} />
               })}
             </PortfolioList>
           </Portfolio>

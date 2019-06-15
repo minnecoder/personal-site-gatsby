@@ -37,7 +37,7 @@ const SkillSection = ({ title, imgData }) => (
     <h3>{title}</h3>
     <SkillItems>
       {imgData.map(({ node }) => (
-        <SkillItem>
+        <SkillItem key={node.name}>
           <div>
             <Img fixed={node.childImageSharp.fixed} />
           </div>
@@ -53,6 +53,6 @@ const SkillSection = ({ title, imgData }) => (
 export default SkillSection
 
 SkillSection.propTypes = {
-  imgData: PropTypes.object,
+  imgData: PropTypes.array,
   title: PropTypes.string,
 }

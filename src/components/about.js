@@ -1,80 +1,27 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import SkillSection from './SkillsSection'
 import media from './media'
 
-const AboutPage = () => (
-  <StaticQuery
-    query={graphql`
-      {
-        front: allFile(sort: { order: ASC, fields: [id] }, filter: { relativePath: { regex: "icons/front.*.png/" } }) {
-          edges {
-            node {
-              name
-              relativePath
-              childImageSharp {
-                fixed(width: 48, height: 48) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
-          }
-        }
-        back: allFile(filter: { relativeDirectory: { eq: "icons/back" } }) {
-          edges {
-            node {
-              name
-              relativePath
-              childImageSharp {
-                fixed(width: 48, height: 48) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
-          }
-        }
-        tools: allFile(filter: { relativeDirectory: { eq: "icons/tools" } }) {
-          edges {
-            node {
-              name
-              relativePath
-              childImageSharp {
-                fixed(width: 48, height: 48) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => {
-      const FEimages = data.front.edges
-      const BEimages = data.back.edges
-      const Toolimages = data.tools.edges
-      return (
-        <About id="about">
-          <AboutSection>
-            <h1>About</h1>
-            <p>
-              Hi! My name is Sean Parkin I am a web developer that is based in Minnesota. I make websites and web
-              applications using JavaScript. I am currently learning all of the things that React has to offer. React is
-              my go-to for web applications and use Gatsby for websites.
-            </p>
-          </AboutSection>
-          <SkillsSection>
-            <h2>Skills</h2>
-            <Skills>
-              <SkillSection title="Front End Skills" imgData={FEimages} />
-              <SkillSection title="Back End Skills" imgData={BEimages} />
-              <SkillSection title="Tools" imgData={Toolimages} />
-            </Skills>
-          </SkillsSection>
-        </About>
-      )
-    }}
-  />
+const AboutPage = ({ FEimages, BEimages, Toolimages }) => (
+  <About id="about">
+    <AboutSection>
+      <h1>About</h1>
+      <p>
+        Hi! My name is Sean Parkin I am a web developer that is based in Minnesota. I make websites and web applications
+        using JavaScript. I am currently learning all of the things that React has to offer. React is my go-to for web
+        applications and use Gatsby for websites.
+      </p>
+    </AboutSection>
+    <SkillsSection>
+      <h2>Skills</h2>
+      <Skills>
+        <SkillSection title="Front End Skills" imgData={FEimages} />
+        <SkillSection title="Back End Skills" imgData={BEimages} />
+        <SkillSection title="Tools" imgData={Toolimages} />
+      </Skills>
+    </SkillsSection>
+  </About>
 )
 
 export default AboutPage

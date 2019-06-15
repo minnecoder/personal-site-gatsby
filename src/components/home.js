@@ -6,8 +6,6 @@ import mountains from '../images/white-building.jpg'
 
 const Home = ({ bgImage }) => (
   <HomeSect id="home">
-    {' '}
-    {console.log(bgImage)}
     <Img fluid={bgImage.childImageSharp.fluid} />
     <HomeText>
       <h2>Sean Parkin</h2>
@@ -24,10 +22,7 @@ export default Home
 
 const HomeSect = styled.div`
   height: 100%;
-
   position: relative;
-  // padding-top: 8vh;
-  // z-index: 1;
 `
 
 const HomeText = styled.div`
