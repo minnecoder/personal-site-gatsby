@@ -14,16 +14,16 @@
     "description": "React starter built with Babel and Webpack. Comes with ability to use Sass or Styled Components",
     "img": "react-from-scratch.png",
     "tech": "React, Babel, Webpack, Sass",
-    "github": "https://github.com/minnecoder/ReactFromScratch",
+    "github": "https://github.com/minnecoder/delivery-notes-fullstack",
     "website": "https://github.com/minnecoder/ReactFromScratch"
   },
   {
-    "id": "2",
-    "name": "React From Scratch",
+    "id": "3",
+    "name": "Delivery Application API",
     "description": "React starter built with Babel and Webpack. Comes with ability to use Sass or Styled Components",
     "img": "react-from-scratch.png",
     "tech": "React, Babel, Webpack, Sass",
-    "github": "https://github.com/minnecoder/ReactFromScratch",
+    "github": "https://github.com/minnecoder/delivery-api",
     "website": "https://github.com/minnecoder/ReactFromScratch"
   }
 ]

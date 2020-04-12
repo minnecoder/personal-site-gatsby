@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import media from './media'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import media from './media';
 
 const PortfolioItem = ({ node, imgSrc }) => (
   <PortfolioContainer>
@@ -15,20 +15,19 @@ const PortfolioItem = ({ node, imgSrc }) => (
         <strong>Technologies Used: </strong>
         {node.tech}
       </ProjectTechStack>
-
       <WorkBtns>
         <WorkBtn href={node.website}>Website</WorkBtn>
         <WorkBtn href={node.github}>GitHub</WorkBtn>
       </WorkBtns>
     </Info>
   </PortfolioContainer>
-)
-export default PortfolioItem
+);
+export default PortfolioItem;
 
 PortfolioItem.propTypes = {
-  node: PropTypes.object,
-  imgSrc: PropTypes.string,
-}
+  node: PropTypes.objectOf(PropTypes.string).isRequired,
+  imgSrc: PropTypes.string.isRequired,
+};
 const PortfolioContainer = styled.div`
   display: flex;
   width: 50%;
@@ -43,12 +42,12 @@ const PortfolioContainer = styled.div`
   width: 80%;
   flex-direction: column;
   `}
-`
+`;
 
 const Image = styled.div`
   flex-basis: 100%;
   border-radius: 0.5rem;
-`
+`;
 
 const Info = styled.div`
   flex-basis: 100%;
@@ -62,11 +61,11 @@ const Info = styled.div`
     text-align: center;
     padding: 0.8rem 0;
   }
-`
-const ProjectDesc = styled.p``
+`;
+const ProjectDesc = styled.p``;
 const ProjectTechStack = styled.p`
   // margin-top: 0.2rem;
-`
+`;
 
 const WorkBtns = styled.div`
   display: flex;
@@ -81,7 +80,7 @@ const WorkBtns = styled.div`
   flex-direction: column;
     margin-top: 0.5rem;
   `}
-`
+`;
 
 const WorkBtn = styled.a`
   margin: 0 20px;
@@ -97,4 +96,4 @@ const WorkBtn = styled.a`
   @media (max-width: 1024px) {
     margin-top: 0.5rem;
   }
-`
+`;

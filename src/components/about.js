@@ -1,16 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
-import SkillSection from './SkillsSection'
-import media from './media'
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import SkillSection from './SkillsSection';
+import media from './media';
 
 const AboutPage = ({ FEimages, BEimages, Toolimages }) => (
   <About id="about">
     <AboutSection>
       <h1>About</h1>
       <p>
-        Hi! My name is Sean Parkin I am a web developer that is based in Minnesota. I make websites and web applications
-        using JavaScript. I am currently learning all of the things that React has to offer. React is my go-to for web
-        applications and use Gatsby for websites.
+        Hi! My name is Sean Parkin I am a web developer that is based in
+        Minnesota. I make websites and web applications using JavaScript. I am
+        currently learning all of the things that React has to offer. React is
+        my go-to for web applications and use Gatsby for websites.
       </p>
     </AboutSection>
     <SkillsSection>
@@ -22,16 +24,24 @@ const AboutPage = ({ FEimages, BEimages, Toolimages }) => (
       </Skills>
     </SkillsSection>
   </About>
-)
+);
 
-export default AboutPage
+export default AboutPage;
+
+AboutPage.propTypes = {
+  FEimages: PropTypes.arrayOf(PropTypes.object).isRequired,
+  BEimages: PropTypes.arrayOf(PropTypes.object).isRequired,
+  Toolimages: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+
 const About = styled.div`
   display: flex;
   flex-direction: column;
   padding: 60px 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #fff;
-`
+`;
 const AboutSection = styled.div`
   width: 70%;
   margin: 0 auto;
@@ -44,7 +54,7 @@ const AboutSection = styled.div`
     text-align: center;
     margin-bottom: 20px;
   }
-`
+`;
 const Skills = styled.div`
   display: flex;
   margin: 0 auto;
@@ -54,11 +64,11 @@ const Skills = styled.div`
   ${media.plusphone`
   flex-wrap: wrap;
   `}
-`
+`;
 const SkillsSection = styled.div`
   margin: 0 auto;
   > h2 {
     text-align: center;
     margin-bottom: 1rem;
   }
-`
+`;

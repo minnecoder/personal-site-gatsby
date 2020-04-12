@@ -1,12 +1,12 @@
-import React from 'react'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
-import { node } from 'prop-types'
-import mountains from '../images/white-building.jpg'
+import React from 'react';
+import Img from 'gatsby-image';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Home = ({ bgImage }) => (
   <HomeSect id="home">
     <Img fluid={bgImage.childImageSharp.fluid} />
+    {/* {console.log(bgImage)} */}
     <HomeText>
       <h2>Sean Parkin</h2>
       <p>
@@ -16,14 +16,14 @@ const Home = ({ bgImage }) => (
       </p>
     </HomeText>
   </HomeSect>
-)
+);
 
-export default Home
+export default Home;
 
 const HomeSect = styled.div`
   height: 100%;
   position: relative;
-`
+`;
 
 const HomeText = styled.div`
   font-family: 'Poppins', sans-serif;
@@ -42,4 +42,4 @@ const HomeText = styled.div`
     color: #111;
     font-size: 1em;
   }
-`
+`;

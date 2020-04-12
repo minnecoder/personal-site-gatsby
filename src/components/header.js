@@ -1,7 +1,7 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import styled from 'styled-components'
-import media from './media'
+import { Link } from 'gatsby';
+import React from 'react';
+import styled from 'styled-components';
+import media from './media';
 
 const Header = () => (
   <Nav>
@@ -14,13 +14,13 @@ const Header = () => (
         <Navlink to="/#about">About</Navlink>
         <Navlink to="/#work">Portfolio</Navlink>
         <Navlink to="/#contact">Contact</Navlink>
-        {/* <Navlink to="/blog">Blog</Navlink> */}
+        <Navlink to="/blog">Blog</Navlink>
       </Navlinks>
     </Navbar>
   </Nav>
-)
+);
 
-export default Header
+export default Header;
 
 const Nav = styled.div`
   position: fixed;
@@ -31,7 +31,7 @@ const Nav = styled.div`
   background: #fff;
   height: 60px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-`
+`;
 
 const Navbar = styled.div`
   display: flex;
@@ -42,7 +42,7 @@ const Navbar = styled.div`
   flex-direction: column;
   justify-content: center;
   `}
-`
+`;
 
 const LogoLink = styled(Link)`
   text-decoration: none;
@@ -55,14 +55,14 @@ const LogoLink = styled(Link)`
   margin: 0 auto;
   padding: 0;
   `}
-`
+`;
 const Navlinks = styled.div`
   padding-right: 4rem;
   ${media.tablet`
    padding: 0;
    margin-top: 0.2rem;
   `}
-`
+`;
 const Navlink = styled(Link)`
   text-decoration: none;
   color: #38384f;
@@ -76,4 +76,4 @@ const Navlink = styled(Link)`
   ${media.plusphone`
   padding: 0 0.4rem;
   `}
-`
+`;

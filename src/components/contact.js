@@ -1,10 +1,12 @@
-import React from 'react'
-import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa'
-import styled from 'styled-components'
+import React from 'react';
+import {
+  FaGithub, FaTwitter, FaLinkedin, FaEnvelope,
+} from 'react-icons/fa';
+import styled from 'styled-components';
 
 const ContactArea = styled.div`
-  font-family: 'Poppins', sans-serif;
-`
+  font-family: "Poppins", sans-serif;
+`;
 const ContactSect = styled.div`
   width: 70%;
   padding: 100px 0;
@@ -24,7 +26,7 @@ const ContactSect = styled.div`
     padding: 20px;
     color: #38384f;
   }
-`
+`;
 
 const SocialLinks = styled.div`
   padding: 60px 0;
@@ -33,21 +35,23 @@ const SocialLinks = styled.div`
   > a {
     padding: 0px 15px;
   }
-`
+`;
 
 const SocialLink = styled.a`
   color: #111  
 &:hover {
     color: #0253b3;
   }
-`
+`;
 
 const Contact = () => (
   <ContactArea id="contact">
     <ContactSect>
       <h1>Contact Me</h1>
       <p>
-        Do you like what you have seen and you are interested in working me? <br />
+        Do you like what you have seen and you are interested in working me?
+        {' '}
+        <br />
         Use one of the links below to get in contact with me.
       </p>
       <SocialLinks>
@@ -66,6 +70,6 @@ const Contact = () => (
       </SocialLinks>
     </ContactSect>
   </ContactArea>
-)
+);
 
-export default Contact
+export default Contact;

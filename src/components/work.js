@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import { StaticQuery, graphql } from 'gatsby'
-import PortfolioItem from './PortfolioItem'
+import React from 'react';
+import styled from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby';
+import PortfolioItem from './PortfolioItem';
 // import media from './media'
 
 const Work = () => (
@@ -34,9 +34,9 @@ const Work = () => (
         }
       }
     `}
-    render={data => {
-      const portfolioData = data.allProjectsJson.edges
-      const portfolioImages = data.allFile.edges
+    render={(data) => {
+      const portfolioData = data.allProjectsJson.edges;
+      const portfolioImages = data.allFile.edges;
       return (
         <PortfolioSection id="work">
           <Portfolio>
@@ -44,19 +44,19 @@ const Work = () => (
 
             <PortfolioList>
               {portfolioData.map(({ node }) => {
-                const image = portfolioImages.find(n => n.node.relativePath === `projects/${node.img}`)
-                const imgSrc = image.node.childImageSharp.fluid.src
-                return <PortfolioItem node={node} imgSrc={imgSrc} key={node.name} />
+                const image = portfolioImages.find((n) => n.node.relativePath === `projects/${node.img}`);
+                const imgSrc = image.node.childImageSharp.fluid.src;
+                return <PortfolioItem node={node} imgSrc={imgSrc} key={node.name} />;
               })}
             </PortfolioList>
           </Portfolio>
         </PortfolioSection>
-      )
+      );
     }}
   />
-)
+);
 
-export default Work
+export default Work;
 
 const PortfolioSection = styled.div`
   padding-bottom: 60px;
@@ -64,7 +64,7 @@ const PortfolioSection = styled.div`
   background: #eee;
   font-family: 'Poppins', sans-serif;
   font-size: 0.9em;
-`
+`;
 const Portfolio = styled.div`
   margin: 0 auto;
   justify-items: center;
@@ -77,10 +77,10 @@ const Portfolio = styled.div`
     color: #38384f;
     padding: 20px 0;
   }
-`
+`;
 
 const PortfolioList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;

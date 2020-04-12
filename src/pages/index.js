@@ -1,14 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import Header from '../components/header'
-import Home from '../components/home'
-import Work from '../components/work'
-import About from '../components/about'
-import Contact from '../components/contact'
-import Footer from '../components/footer'
-import './index.css'
+import React from 'react';
+import styled from 'styled-components';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import Header from '../components/header';
+import Home from '../components/home';
+import Work from '../components/work';
+import About from '../components/about';
+import Contact from '../components/contact';
+import Footer from '../components/footer';
+import './index.css';
 
 const IndexPage = () => (
   <StaticQuery
@@ -62,7 +62,7 @@ const IndexPage = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Main>
         <Helmet title="Sean Parkin" />
         <Home bgImage={data.bgImage} />
@@ -74,9 +74,9 @@ const IndexPage = () => (
       </Main>
     )}
   />
-)
+);
 
-export default IndexPage
+export default IndexPage;
 
 const Main = styled.div`
   display: flex;
@@ -84,4 +84,4 @@ const Main = styled.div`
   justify-content: space-between;
   height: 100%;
   position: relative;
-`
+`;

@@ -1,20 +1,29 @@
 module.exports = {
+    "env": {
+        "browser": true,
+        "es6": true
+    },
     "extends": [
-      "wesbos"
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
     ],
     "rules": {
-      "no-console": 1,
-      "prefer-destructuring": 0,
-      "react/destructuring-assignment": 0,
-      "react/prop-types": 1,
-      "prettier/prettier": [
-        "error",
-        {
-          "trailingComma": "es5",
-          "singleQuote": true,
-          "printWidth": 120,
-          "tabWidth": 2,
-        }
-      ]
+        "react/jsx-filename-extension": 0, 
+        "react/no-danger": 0,
+        "max-len": 0,
     }
-  };
+};

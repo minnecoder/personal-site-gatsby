@@ -1,8 +1,8 @@
-import React from 'react'
-import Img from 'gatsby-image'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import media from './media'
+import React from 'react';
+import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import media from './media';
 
 const SkillsSection = styled.div`
   padding: 0.5rem 0;
@@ -10,7 +10,7 @@ const SkillsSection = styled.div`
   > h3 {
     text-align: center;
   }
-`
+`;
 const SkillItems = styled.div`
   display: flex;
 
@@ -23,14 +23,14 @@ const SkillItems = styled.div`
     margin-top: 0.5rem;
     flex-wrap: wrap;
   `}
-`
+`;
 const SkillItem = styled.div`
   padding: 0 0.7rem;
 
   ${media.plusphone`
     margin-top: 0.5rem;
   `}
-`
+`;
 
 const SkillSection = ({ title, imgData }) => (
   <SkillsSection>
@@ -48,11 +48,11 @@ const SkillSection = ({ title, imgData }) => (
       ))}
     </SkillItems>
   </SkillsSection>
-)
+);
 
-export default SkillSection
+export default SkillSection;
 
 SkillSection.propTypes = {
-  imgData: PropTypes.array,
-  title: PropTypes.string,
-}
+  imgData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  title: PropTypes.string.isRequired,
+};
