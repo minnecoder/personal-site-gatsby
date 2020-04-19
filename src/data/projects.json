@@ -1,29 +1,65 @@
 [
   {
     "id": "1",
-    "name": "Personal Portfolio",
-    "description": "This is the page that you are currently looking at. It is bult with Gatsby and uses GraphQL that comes with Gatsby to serve up the information for the blogs and the images that are used. ",
-    "img": "portfolio.jpg",
-    "tech": "Gatsby, GraphQL",
-    "github": "https://github.com/minnecoder/personal-site-gatsby",
-    "website": "https://www.seanparkin.netlify.com"
+    "name": "Delivery Notes",
+    "description": "Full Stack app for notes on delivery route stops (username and password are 'demo' and 'password') ",
+    "img": "del-notes.png",
+    "tech": "React, Node, Express, MongoDB, Mongoose, JWT, Axios",
+    "github": "https://github.com/minnecoder/delivery-notes-fullstack/",
+    "website": "https://notes-fullstack-demo.herokuapp.com/#/"
   },
   {
     "id": "2",
-    "name": "React From Scratch",
-    "description": "React starter built with Babel and Webpack. Comes with ability to use Sass or Styled Components",
+    "name": "Delivery Dashboard",
+    "description": "Dashboard application for the Delivery Application API",
     "img": "react-from-scratch.png",
-    "tech": "React, Babel, Webpack, Sass",
-    "github": "https://github.com/minnecoder/delivery-notes-fullstack",
-    "website": "https://github.com/minnecoder/ReactFromScratch"
+    "tech": "React",
+    "github": "https://github.com/minnecoder/delivery-dashboard",
+    "website": "#"
   },
   {
     "id": "3",
     "name": "Delivery Application API",
-    "description": "React starter built with Babel and Webpack. Comes with ability to use Sass or Styled Components",
+    "description": "API that is used to run multiple applications that would be used for a delivery company",
     "img": "react-from-scratch.png",
-    "tech": "React, Babel, Webpack, Sass",
+    "tech": "Node, Express, Sequelize",
     "github": "https://github.com/minnecoder/delivery-api",
-    "website": "https://github.com/minnecoder/ReactFromScratch"
+    "website": "#"
+  },
+  {
+    "id": "4",
+    "name": "Delivery Scanner",
+    "description": "Application that is what a scanner would be for a delivery driver",
+    "img": "react-from-scratch.png",
+    "tech": "React",
+    "github": "https://github.com/minnecoder/delivery-scanner",
+    "website": "#"
+  },
+  {
+    "id": "5",
+    "name": "Frontend Mentor Huddle Landing Page",
+    "description": "Recreation of the Frontend Mentor Huddle Landing Page. Made from the mockup that was provided, images were provided.",
+    "img": "fm-landing.png",
+    "tech": "HTML5, CSS3",
+    "github": "https://github.com/minnecoder/fm-huddle-landing-page",
+    "website": "https://amazing-jones-7dbe24.netlify.app/"
+  },
+  {
+    "id": "6",
+    "name": "Frontend Mentor Intro Component with Signup",
+    "description": "Recreation of the Frontend Mentor Intro Component with Signup. Made from the mockup that was provided, images were provided.",
+    "img": "fm-intro.png",
+    "tech": "HTML5, CSS3",
+    "github": "https://github.com/minnecoder/fm-intro-component-with-signup",
+    "website": "https://condescending-wescoff-0eec08.netlify.app/"
+  },
+  {
+    "id": "7",
+    "name": "Frontend Mentor Single Price Card",
+    "description": "Recreation of the Frontend Mentor Single Price Card. Made from the mockup that was provided, images were provided.",
+    "img": "fm-price.png",
+    "tech": "HTML5, CSS3",
+    "github": "https://github.com/minnecoder/fm-single-price-grid",
+    "website": "https://keen-gates-a859aa.netlify.app/"
   }
 ]
